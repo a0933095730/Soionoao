@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/custom.css"> 
 </head>
 <body class="gray-bg">
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="navbar">
     <div class="container">
         <div class="navbar-header">   
-            <!--menu start-->
+        <!--menu start-->
         <div class="all-menu" id="mask-toggle">                   
             <ul>
                 <li>
@@ -413,7 +413,7 @@
             </ul>
         </div>  
         <!--menu end-->
-        <a class="navbar-brand c-navbar-brand" href="home.html">
+        <a class="navbar-brand" href="home.html">
             <img src="http://s2.sina.tw/assets/images/sinalogo_b.d426f021a3.png" height="40" alt="新浪台灣">
         </a>
         </div>  
@@ -463,13 +463,13 @@
                     </div>
                 </div>
             </div>
-            <div class="c-side">
+            <div class="wrap wrap-default">
                 <div class="pull-right">                                    
                     <div class="btn-group">
-                        <a href="javascript:void(0);" class="btn btn-default active" id="mode-col-toggle">
+                        <a href="javascript:void(0);" class="btn btn-default " id="mode-col-toggle">
                             <i class="fa fa-th"></i>
                         </a>                    
-                        <a href="javascript:void(0);" class="btn btn-default" id="mode-list-toggle">
+                        <a href="javascript:void(0);" class="btn btn-default active" id="mode-list-toggle">
                             <i class="fa fa-bars"></i>
                         </a>
                     </div> 
@@ -492,8 +492,8 @@
                     </div>                  
                 </div>    
             </div>    
-            <!--<div class="search-cont-wrap">
-                <div class="c-main mode-list">
+            <div class="search-cont-wrap">
+                <div class="mode-wrap mode-list">
                     <div class="product">
                         <a href="#" class="product-left">
                             <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
@@ -531,61 +531,25 @@
                                 <a href="">
                                     LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
                                 </a>
-                            </h1>
-                            <div class="good-news">
-                                每滿999現折100►11/1-11/30滿1800送628折價金
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
                             </div>
-                            <div class="price">$<span>7,300</span></div>
                             <div class="info">
-                                <ul class="breadcrumb-xs">
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                </ul>
-                            </div>                                
-                        </div>    
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
                         <div class="product-right">
                             <ul class="wrap">
-                                <li><a href="" class="btn btn-link" title="收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">收藏</span></a></li>
-                                <li><a href="" class="btn btn-primary"> <span class="">前往購買</span></a></li>                                
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
                             </ul>                        
-                        </div>                    
-                    </div>  
-                    <div class="product">
-                        <a href="#" class="product-left">
-                            <img src="https://s.yimg.com/wb/images/4346058CC20BF894EF57743BDC63A5506887AD6F" alt="">
-                        </a>
-                        <div class="product-body">
-                            <h1 class="tt">
-                                <a href="">
-                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
-                                </a>
-                            </h1>
-                            <div class="good-news">
-                                每滿999現折100►11/1-11/30滿1800送628折價金
-                            </div>
-                            <div class="price">$<span>7,300</span></div>
-                            <div class="info">
-                                <ul class="breadcrumb-xs">
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                    <li class="less"><a href="">udn買東西</a></li>
-                                </ul>
-                            </div>                                
-                        </div>    
-                        <div class="product-right">
-                            <ul class="wrap">
-                                <li><a href="" class="btn btn-link" title="收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">收藏</span></a></li>                                
-                                <li><a href="" class="btn btn-primary">前往購買</a></li>
-                            </ul>                        
-                        </div>                    
-                    </div>                                                                 
-                </div>               
-            </div>           -->
-            <div class="search-cont-wrap">
-                <div class="c-main mode-col">
+                        </div>
+                    </div> 
                     <div class="product">
                         <a href="#" class="product-left">
                             <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
@@ -610,10 +574,318 @@
                         <div class="product-right">
                             <ul class="wrap">
                                 <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
-                                <li><a href="" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
                             </ul>                        
                         </div>
-                    </div>    
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
+                    <div class="product">
+                        <a href="#" class="product-left">
+                            <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="tt">
+                                <a href="">
+                                    LONGINES 征服者陶瓷 三眼機械計時腕錶L36614566
+                                </a>
+                            </h1>                       
+                            <div class="price">
+                                <i>$</i>
+                                <span>7,300</span>
+                                <i>~</i>
+                                <i>$</i>
+                                <span>10,300</span>
+                            </div>
+                            <div class="info">
+                                <span>共<span>13</span>商家販售 (71個商品)</span>
+                            </div>                  
+                        </div>
+                        <div class="product-right">
+                            <ul class="wrap">
+                                <li><a href="" class="btn btn-link active" title="已收藏"><i class="fa fa-heart fa-fw"></i><span class="phone-hide">已收藏</span></a></li>
+                                <li><a href="price.html" class="btn btn-warning"><span class="">比較價格</span></a></li>                                
+                            </ul>                        
+                        </div>
+                    </div> 
                     <div class="product">
                         <a href="#" class="product-left">
                             <img src="https://img.gohappy.com.tw/images/product/40/1203965/1203965_4.jpg" alt="">
@@ -675,7 +947,7 @@
                         </div>                    
                     </div>                                                                 
                 </div>               
-            </div>                  
+            </div>                                
             <nav class="text-center">
                 <ul class="pagination">
                     <li class="disabled"><a href="#"><span><i class="fa fa-angle-left"></i></span><span class="sr-only">Previous</span></a></li>
@@ -689,24 +961,24 @@
             </nav>                                   
         </div>
         <div class="col-md-3">
-            <div class="c-side">
+            <div class="wrap wrap-default">
                 <div class="card">
                     <div class="tt">
                         相關搜尋
                     </div>
-                    <ul class="hot-word">
+                    <ul class="list">
                         <li><a href="#">NIKE AIR MAX THEA</a></li>
                         <li><a href="#">Apple 平板電腦 iPad</a></li>
                         <li><a href="#">Apple iPad iphone</a></li>              
                     </ul>
                 </div>                
             </div>
-            <div class="c-side">
+            <div class="wrap wrap-default">
                 <div class="card">
                     <div class="tt">
                         您是不是想找？
                     </div>
-                    <ul class="hot-word">
+                    <ul class="list">
                         <li><a href="#">NIKE AIR MAX THEA</a></li>
                         <li><a href="#">Apple 平板電腦 iPad</a></li>
                         <li><a href="#">Apple iPad iphone</a></li>
@@ -742,7 +1014,7 @@
                 <span class="tt">價格</span>
                 <ul>
                     <li class="range-slider-wrap">
-                        <!--<img src="../images/control-bar.png" alt="" style="max-width: 100%;">-->
+                        <!--<img src="images/control-bar.png" alt="" style="max-width: 100%;">-->
                         <div class="sliders" id="nonlinear"></div>
                         <div class="price">
                             <i>$</i>
@@ -750,9 +1022,9 @@
                             <i>~</i>
                             <i>$</i>
                             <span class="example-val" id="upper-value"></span>
-                        </div>                   
+                        </div>   
                     </li>
-                </ul>                       
+                </ul>                      
             </li>
         </ul>
         <ul>
@@ -877,7 +1149,7 @@
             </li>
         </ul> 
       </div>
-      <div class="modal-footer test">
+      <div class="modal-footer btn-block-half">
           <button type="button" class="btn btn-default">清除</button>
           <button type="button" class="btn btn-primary">送出</button>              
       </div>

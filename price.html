@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="gray-bg">
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="navbar">
     <div class="container">
         <div class="navbar-header">   
             <div class="all-menu" id="mask-toggle">                   
@@ -441,7 +441,7 @@
         </div>        
     </div>
 </nav>        
-<div class="container">        
+<div class="container" id="offsetTop">        
     <div class="breadcrumb-wrap">
         <ol class="breadcrumb">
             <li><a href="">SinaBuy</a></li>
@@ -452,7 +452,7 @@
     <div class="row">
         <div class="col-md-12">           
             <div class="">                
-                <div class="c-main mode-list big">
+                <div class="mode-wrap mode-list big">
                     <div class="product">
                         <a href="#" class="product-left">
                             <img src="http://images.sunfar.com.tw/jpg360/395/3954F3YF10.jpg" alt="">
@@ -481,138 +481,144 @@
     </div>
     <div class="row">
         <div class="col-md-12">                
-            <div class="c-main">
-                <ul class="c-nav-tabs">
-                    <li class="active"><a href="#">商品賣場<span class="badge">3</span></a></li>
-                    <li><a href="#">留言評價<span class="badge">3</span></a></li>
-                    <li><a href="#">商品規格/介紹</a></li>
+            <div class="mode-wrap">
+                <ul class="c-nav-tabs" id="priceNavTabs">
+                    <li class="active"><a href="javascript:void(0);" data-tp="0">商品賣場<span class="badge">6</span></a></li>
+                    <li><a href="javascript:void(0);" data-tp="1">留言評價<span class="badge">3</span></a></li>
+                    <li><a href="javascript:void(0);" data-tp="2">商品規格/介紹</a></li>
                 </ul>
                 <!--比價-->
-                <setion>
-                    <a href="#" class="price-list">
-                        <div class="price-list-left"> 
-                            <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                <div id="priceNavCont">
+                    <setion>
+                        <a href="#" class="price-list">
+                            <div class="price-list-left"> 
+                                <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                            </div>
+                            <div class="price-list-body">
+                                <h3>                            
+                                    APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A                           
+                                </h3>   
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>3,000</span>
+                                </div>       
+                                <div class="other">
+                                    <div class="btn btn-primary">前往購買</div>
+                                </div>              
+                            </div>                                                                          
+                        </a>       
+                        <a href="#" class="price-list">
+                            <div class="price-list-left"> 
+                                <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                            </div>
+                            <div class="price-list-body">
+                                <h3>     
+                                    APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
+                                </h3>   
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>1,000</span>
+                                </div>       
+                                <div class="other">
+                                    <div class="btn btn-primary">前往購買</div>
+                                </div>              
+                            </div>                                                                          
+                        </a>     
+                        <a href="#" class="price-list">
+                            <div class="price-list-left"> 
+                                <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                            </div>
+                            <div class="price-list-body">
+                                <h3>     
+                                    APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
+                                </h3>   
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>800</span>
+                                </div>       
+                                <div class="other">
+                                    <div class="btn btn-primary">前往購買</div>
+                                </div>              
+                            </div>                                                                          
+                        </a>    
+                        <a href="#" class="price-list">
+                            <div class="price-list-left"> 
+                                <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                            </div>
+                            <div class="price-list-body">
+                                <h3>     
+                                    APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
+                                </h3>   
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>30,000</span>
+                                </div>       
+                                <div class="other">
+                                    <div class="btn btn-primary">前往購買</div>
+                                </div>              
+                            </div>                                                                          
+                        </a>    
+                        <a href="#" class="price-list">
+                            <div class="price-list-left"> 
+                                <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                            </div>
+                            <div class="price-list-body">
+                                <h3>     
+                                    APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
+                                </h3>   
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>30,000</span>
+                                </div>       
+                                <div class="other">
+                                    <div class="btn btn-primary">前往購買</div>
+                                </div>              
+                            </div>                                                                          
+                        </a>    
+                        <a href="#" class="price-list">
+                            <div class="price-list-left"> 
+                                <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
+                            </div>
+                            <div class="price-list-body">
+                                <h3>     
+                                    APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
+                                </h3>   
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>30,000</span>
+                                </div>       
+                                <div class="other">
+                                    <div class="btn btn-primary">前往購買</div>
+                                </div>              
+                            </div>                                                                          
+                        </a>  
+                    </setion>
+                    <!--留言板-->
+                    <section style="display: none;">
+                        留言板置放
+                    </section>
+                    <!--產品規格-->          
+                    <section style="display: none;">
+                        <div class="bd">
+                            <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286916.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286916.jpg">
+                            <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017211610.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017211610.jpg">
+                            <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286729.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286729.jpg">
+                            <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017269264.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017269264.jpg">
+                            <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017241077.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017241077.jpg">
                         </div>
-                        <div class="price-list-body">
-                            <h3>                            
-                                APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A                           
-                            </h3>   
-                            <div class="price">
-                                <i>$</i>
-                                <span>3,000</span>
-                            </div>       
-                            <div class="other">
-                                <div class="btn btn-primary">前往購買</div>
-                            </div>              
-                        </div>                                                                          
-                    </a>       
-                    <a href="#" class="price-list">
-                        <div class="price-list-left"> 
-                            <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
-                        </div>
-                        <div class="price-list-body">
-                            <h3>     
-                                APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
-                            </h3>   
-                            <div class="price">
-                                <i>$</i>
-                                <span>1,000</span>
-                            </div>       
-                            <div class="other">
-                                <div class="btn btn-primary">前往購買</div>
-                            </div>              
-                        </div>                                                                          
-                    </a>     
-                    <a href="#" class="price-list">
-                        <div class="price-list-left"> 
-                            <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
-                        </div>
-                        <div class="price-list-body">
-                            <h3>     
-                                APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
-                            </h3>   
-                            <div class="price">
-                                <i>$</i>
-                                <span>800</span>
-                            </div>       
-                            <div class="other">
-                                <div class="btn btn-primary">前往購買</div>
-                            </div>              
-                        </div>                                                                          
-                    </a>    
-                    <a href="#" class="price-list">
-                        <div class="price-list-left"> 
-                            <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
-                        </div>
-                        <div class="price-list-body">
-                            <h3>     
-                                APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
-                            </h3>   
-                            <div class="price">
-                                <i>$</i>
-                                <span>30,000</span>
-                            </div>       
-                            <div class="other">
-                                <div class="btn btn-primary">前往購買</div>
-                            </div>              
-                        </div>                                                                          
-                    </a>    
-                    <a href="#" class="price-list">
-                        <div class="price-list-left"> 
-                            <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
-                        </div>
-                        <div class="price-list-body">
-                            <h3>     
-                                APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
-                            </h3>   
-                            <div class="price">
-                                <i>$</i>
-                                <span>30,000</span>
-                            </div>       
-                            <div class="other">
-                                <div class="btn btn-primary">前往購買</div>
-                            </div>              
-                        </div>                                                                          
-                    </a>    
-                    <a href="#" class="price-list">
-                        <div class="price-list-left"> 
-                            <img src="http://s.feebee.com.tw/logo/logo_momomall.png" alt="">                       
-                        </div>
-                        <div class="price-list-body">
-                            <h3>     
-                                APPLE  iPad Air 2(WIFI/16G/太空灰)MGL12TA/A
-                            </h3>   
-                            <div class="price">
-                                <i>$</i>
-                                <span>30,000</span>
-                            </div>       
-                            <div class="other">
-                                <div class="btn btn-primary">前往購買</div>
-                            </div>              
-                        </div>                                                                          
-                    </a>  
-                </setion>
-                <!--留言板-->
-                <section style="display: none;">
-                    留言板置放
-                </section>
-                <!--產品規格-->          
-                <section style="display: none;">
-                    <div class="bd">
-                        <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286916.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286916.jpg">
-                        <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017211610.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017211610.jpg">
-                        <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286729.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017286729.jpg">
-                        <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017269264.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017269264.jpg">
-                        <img class="fb-u" src="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017241077.jpg" alt="http://img10-tw1.uitoximg.com/A/show/AW000001/2015/0907/AM0002491/i201509AM070002491_144160017241077.jpg">
-                    </div>
-                </section>                  
+                    </section>            
+                </div>
+                      
             </div>
-            <div class="c-main">
+            <div class="mode-wrap">
                 <ul class="c-nav-tabs">
                     <li class="active"><a href="#">推薦商品</a></li>               
                 </ul>                    
                 <div class="c-slide-wrap">
-                    <div class="responsive slider">         
+                    <div class="loading-block" style="display: block;">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    </div> 
+                    <div class="responsive slider" style="display:none;">         
                         <a href="">
                             <div class="slider-hd">
                                 <img data-lazy="https://ssl.feebee.com.tw/pdimg/6f/c0/9b/d4/2f677595dbaee64bc9e7bc16-500.jpg" alt="SONY新力 32吋3D LED液晶電視(KDL-32EX720)">
@@ -722,8 +728,8 @@
                 </div>                 
             </div>                                           
         </div>                      
-        <div class="col-md-8">                    
-            <div class="c-main">
+        <div class="col-lg-9 col-md-8">                    
+            <div class="mode-wrap">
                 <ul class="c-nav-tabs">
                     <li class="active"><a href="#">你是不是想找？</a></li>               
                 </ul>            
@@ -741,7 +747,7 @@
                 </ul>           
             </div> 
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-3 col-md-4">
             <div class="ad-wrap">
                 <img src="https://ap-static.sociomantic.com/static/84264_5" alt="">
             </div>
@@ -756,31 +762,8 @@
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/price-nav-tab.js"></script>
 <script src="js/slick.js"></script>
-<script>
-    $(document).on('ready', function () {
-        $(".responsive").slick({     
-            lazyLoad: 'ondemand',       
-            infinite: true,
-            variableWidth: true,
-            slidesToShow: 6,
-            slideToScroll:1,
-            dots: true,
-            autoplay: true,//自動撥放
-            autoplaySpeed: 1000,//自動撥放秒數                
-            rows: 1,
-            responsive: [
-                {
-                    breakpoint: 769,
-                    settings: {                        
-                        arrows: false
-                        //prevArrow: '<button class="slick-next" style="right: 0;">Back</button>',
-                        //nextArrow: '<button class="slick-prev" style="left: 0;">Forward</button>'
-                    }                    
-                }
-            ]
-        });              
-    });      
-</script>
+<script src="js/product-slider-v1.js"></script
 </body>
 </html>

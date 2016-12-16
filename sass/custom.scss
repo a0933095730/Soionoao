@@ -10,6 +10,9 @@
     clear: both;
   }
 }
+a:focus{
+    outline: none;
+}
 @mixin main-title{
     font-size: 1.6rem;
     border-bottom: 1px solid #d72825;
@@ -22,22 +25,85 @@ $all-menu-height: 500px;
 $menu-display: none;
 //1320
 //****************************
-a:focus{
-    outline: none;
+// .navbar-fixed-top{
+//     position: fixed;
+//     right: 0;
+//     left: 0;
+//     z-index: 1030;    
+//     top: -145px;
+//     &.down{
+//         top:0;
+//         transition: top 0.5s ease;
+//     }
+//     &.up{
+//         top: -145px;
+//         transition: top 0.5s ease;
+//     }
+
+// }
+// .navbar{
+//     top: 0;
+//     &.navbarfixed{
+//         position: fixed;
+//         transform: translateY(-100%);
+//         z-index: 1030;
+//     }
+//     &.is-minimized{
+//         visibility: hidden;
+//     }
+//     &.is-maximized{
+//         transform: translateY(0);
+//     }
+// }
+.navbar{
+    top: 0;
+    z-index: 1030;
+    transition: all 0.3s ease-in-out;
 }
+.min{
+    transform: translateY(-100%);
+}
+.max{
+    transform: translateY(0%);
+}
+////////////////////////////
+// .navbar{
+//     position: fixed;
+//     top: 0;
+//     transition: top 0.2s ease-in-out;
+//     z-index: 1030;
+// }
+// .nav-up {
+//     top: -66px;
+//     @media (max-width: $screen-tablet){
+//         top: -132px;
+//     }
+// }
+// #offsetTop{
+//     padding-top: 80px;
+//     @media (max-width: $screen-tablet){
+//         padding-top: 146px;
+//     }
+// }
+////////////////////////////
 .gray-bg{
     background-color: #efefef;
 }
-.hidden-y{
-    overflow-y: hidden;
+.add-margin{
+    margin-top: 80px;
+    @media (max-width: $screen-tablet){
+        margin-top: 145px;
+    }
 }
 .loading-block{
-    line-height: 357px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.04);  
+    padding: 5% 0;
 }
-.control-slider{
-    position: relative;
+.less{//小於符號
+     & + &:before{
+        content: '>';
+        display: inline;
+    }   
 }
 @media (max-width: $screen-phone){
      .phone-hide{
@@ -49,31 +115,20 @@ a:focus{
         padding: 0 5px!important;
     }
 }
+.no-right-padding{
+    padding-right: 0;
+}
 .search-bar{
     padding: 10px 0;
     width: 100%;
-    @media (max-width: $screen-tablet){
-        width: 100%;
-    }
 }
 .navbar{
     width: 100%;
     border-radius: 0;
     border: 0;   
 }
-.department-btn{
-    color: #fff;
-    padding: 19px;
-    display: inline-block;
-    font-weight: bold;
-    float: left;
-    &:hover{
-        color: #fff;
-        text-decoration: none;
-    }
-    @media (max-width: $screen-tablet){
-        float: right;
-    }
+.navbar-brand{
+    padding: 13px;
 }
 //all-menu phone
 @media (max-width: $screen-desktop - 1){
@@ -82,8 +137,7 @@ a:focus{
          ul{
             list-style: none;
             padding: 0;
-            margin: 0;
-            li{}            
+            margin: 0;       
         }
         >ul{
             >li{
@@ -98,7 +152,7 @@ a:focus{
                     left: 0;
                     width: 100%;
                     background: #fff;
-                    z-index: 3;
+                    z-index: 11;
                     top: 0;
                     height: 100vh;
                     overflow-y: scroll;
@@ -358,36 +412,27 @@ a:focus{
         float: right
     }
 }
-.c-main{
+.mode-wrap{
     margin-bottom: 20px;
     section{
         background-color: #fff;
+        img{
+            max-width: 100%;
+        }
     }
 }
-.less{
-     & + &:before{
-        content: '>';
-        display: inline;
-    }   
-}
-.navbar-brand{
-    padding: 13px;
-}
-.c-navbar-form{
-    text-align: center;
-}
-.c-side{
-    background-color: #fff;
-    padding: 12px;
-    // border: 1px solid #DDD;
-    @include clearfix;      
+.wrap{    
     margin-bottom: 10px;
-    @media (max-width: $screen-phone){
-        padding: 10px;
+    @include clearfix;          
+    &.wrap-default{
+        padding: 12px;
+        background-color: #fff;
+        @media (max-width: $screen-phone){
+            padding: 10px;
+        }
     }
 }
 .breadcrumb-wrap{
-    // border: 1px solid #DDD;
     margin-bottom: 10px;
     padding: 12px;
     background-color: #fff;
@@ -406,13 +451,13 @@ a:focus{
     @media (max-width: $screen-phone){
         padding: 0 15px;
     }
-    .tt{
+    .tt{//搜尋條件
         font-size: 1.6rem;
         color: $brand-primary;
         font-weight: bold;
         margin-top: 10px;
     }
-    .info-left{
+    .info-left{//找到N筆
         float: left;
         padding: 5px 0;
         span{
@@ -421,7 +466,7 @@ a:focus{
             font-weight: bold;
         }
     }
-    .info-right{
+    .info-right{//上一頁下一頁
         float: right;
         .pager{
             margin: 0 0;                
@@ -513,12 +558,6 @@ a:focus{
                 color: $brand-primary;
                 text-decoration: none;
             }
-        }
-    }
-    //比價主板
-    .mode-price & {
-        .product-left{
-
         }
     }
     //卡片式
@@ -701,7 +740,7 @@ a:focus{
             }
         }
     }
-    //
+    //比價頁商品呈現 一張而已
     .mode-list.big & {
         margin-bottom: 0;
         &:hover{
@@ -721,16 +760,12 @@ a:focus{
     .tt{
         @include main-title;
     }
-    .hot-word{
+    .list{
         list-style: none;
         padding: 0;
         margin: 0;
         li{         
             border-bottom: 1px dashed #dddddd;                  
-            // @media (max-width: $screen-desktop){
-            //     width: 50%;
-            //     float: left;
-            // }
             a{
                 display: block;                
                 padding: 5px 10px; 
@@ -742,308 +777,49 @@ a:focus{
         }
     }
 }
-.card{
-    .item{
-        display: block;
-        background-color: #fff;     
-        &:hover{
-            text-decoration: none;            
-            opacity: 0.7;
-        }   
-        .item-top{
-            width: 100%;
-            height: 248px;
-            overflow: hidden;
-            img{
-                position: relative;
-                height: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-        .item-bottom{
-            padding: 10px;
-            .info{
-                color: #000;
-                font-size: 18px;
-                height: 50px;
-                overflow: hidden;
-            }
-            .price{
-                text-align: right;
-                color: $brand-primary;
-                i{
-                    font-family: Arial;
-                    font-style: normal;
-                }
-                span{
-                    font-size: 18px;
-                }
-            }
-        }
-    }
+// .card{
+//     .item{
+//         display: block;
+//         background-color: #fff;     
+//         &:hover{
+//             text-decoration: none;            
+//             opacity: 0.7;
+//         }   
+//         .item-top{
+//             width: 100%;
+//             height: 248px;
+//             overflow: hidden;
+//             img{
+//                 position: relative;
+//                 height: 100%;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//             }
+//         }
+//         .item-bottom{
+//             padding: 10px;
+//             .info{
+//                 color: #000;
+//                 font-size: 18px;
+//                 height: 50px;
+//                 overflow: hidden;
+//             }
+//             .price{
+//                 text-align: right;
+//                 color: $brand-primary;
+//                 i{
+//                     font-family: Arial;
+//                     font-style: normal;
+//                 }
+//                 span{
+//                     font-size: 18px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-}
-.price-hot-wrod{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    @include clearfix;
-    padding: 10px 0;
-    li{
-        width: 33.3%;
-        float: left;
-        border-bottom: 1px #a6a6a6 dashed;
-        @media (max-width: $screen-phone){
-            width: 100%;
-        }
-        a{
-            display: block;
-            color: #000;
-            padding: 5px 10px; 
-            &:hover{
-                color: $brand-primary;
-            }
-        }
-    }
-}
-//篩選燈箱
-.filter{
-    padding: 15px 30px;  
-    @include clearfix;    
-    ul{
-        list-style: none;
-        padding: 0;        
-        li{
-            .badge{
-                margin-left: 6px;
-                font-weight: normal;
-                font-size: 10px;
-                background-color: #a1a1a1;
-            }
-            .btn-primary{
-                @include border-radius(20px);
-                padding: 3px 8px 3px 3px;
-            }
-        }
-    }
-    >ul{        
-        border-bottom: 1px dashed #ccc;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        &:last-child{
-            border-bottom: 0;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        >li{
-            font-weight: bold;      
-            > ul {
-                @include clearfix;
-                margin-top: 10px;
-                > li{                    
-                    float: left;
-                    display: block;
-                    width: 100%;
-                    margin-top: 5px;
-                    @media (min-width: $screen-phone){
-                        width: 50%;
-                    }
-                    label{
-                        font-weight: normal;
-                    }                    
-                }
-            }            
-        }         
-    }
-}
-.test{
-    text-align: center;
-    @include clearfix;
-    .btn{
-        width: 48%;
-        float: left;   
-    }
-    .btn + .btn{
-        margin-left: 4%;
-    }
-} 
-
-.checkbox-style{
-    label{
-        .name{
-            color: $gray-light;
-        }
-        cursor: pointer;            
-        &:hover{            
-            @include transition(all 0.5s ease);
-            .name{
-                color: $brand-primary;
-            }
-            .box{
-                border-color: $brand-primary;
-            }
-        }
-        .box{
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 1px solid #a1a1a1;
-            vertical-align: -3px;
-            border-radius: 2px;
-        }
-        input[type="checkbox"]{
-            display: none;
-            &:checked + .box{    
-                border-color: $brand-primary;            
-                &:before{
-                    font: normal normal normal 14px/1 FontAwesome;
-                    content: "\f00c";
-                    vertical-align: 3px;
-                    color: $brand-primary;
-                }
-            }
-            &:checked ~ .name{
-                color: $brand-primary;
-            }
-        }        
-    }
-}
-.footer{    
-    color: #fff;
-    background-color: #4a4a4a;
-    text-align: center;
-    padding: 15px;
-    @media (max-width: $screen-phone){
-        background-color: transparent;
-        color: #777;
-    }
-    
-}
-.backToTop{
-    display: inline-block;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.4);
-    text-align: center;
-    position: fixed;
-    right: 2%;
-    bottom: 10%;
-    width: 60px;
-    height: 60px;    
-    line-height: 56px;
-    font-size: 32px;
-    @include border-radius(100%);    
-    @include transform(rotate(-45deg));  
-    &:after{
-        content: "\f135";
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: 31px;
-        color: #fff;      
-        @media (max-width: $screen-phone){
-            font-size: 26px;    
-        }       
-    }    
-    &:hover{
-        text-decoration: none;
-    }
-    @media (min-width: $screen-phone){
-        &:hover{
-            background-color: rgba(0, 0, 0, 6);
-            color: #fff;
-            @include transition(all 0.3s);
-        }
-    }
-    @media (max-width: $screen-phone){
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        line-height: 49px;     
-        background-color: rgba(0, 0, 0, 0.4);
-        &:focus,
-        &:hover,
-        &:active{
-            color: #fff;
-        }    
-    }
-}
-//index
-.btn-tag-wrap{
-    padding: 10px 0;
-    @media (max-width: $screen-phone){
-        padding: 10px 10px;
-    }
-    .btn-tag{
-        margin: 3px 0;
-        border: 1px solid $brand-primary;
-        color: $brand-primary;
-        &:hover{
-            background-color: $brand-primary;
-            color: #fff;
-        }
-    }
-}
-
-
-
-//home
-.home-wrap{
-    padding-top: 10%;
-    max-width: 600px;
-}
-.home{
-    text-align: center;
-    .home-header{
-        text-align: center;
-        .logo{
-            display: inline-block;
-        }
-        p{
-            color: $gray-base;            
-        }
-    }
-    .home-body{
-        .hot-tag-wrap{
-            margin:20px 0;
-        }
-        .btn-tag-wrap{
-            .btn-tag{
-                margin: 3px 0;
-                border: 1px solid $brand-primary;
-                color: $brand-primary;
-                &:hover{
-                    background-color: $brand-primary;
-                    color: #fff;
-                }
-            }
-        }
-    }
-}
-.home-footer{
-    color: #777;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-    @media (min-width: 321px){
-        position: fixed;
-        bottom: 0;
-    }
-}
-//遮罩
-.mask{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 66px;
-    bottom: 0;
-    background-color: #000;
-    z-index: 10;
-    opacity: 1;
-    @include transition(opacity 5s linear);
-    &.fade{
-        opacity: 0.5;
-    }
-
-}
+//比價頁
 .price-list{
     background-color: #fff;
     padding: 20px;
@@ -1128,6 +904,7 @@ a:focus{
         }
     }
 }
+//可當tabs 也可以當大單元的title
 .c-nav-tabs{
     list-style: none;
     padding: 0;
@@ -1181,6 +958,269 @@ a:focus{
         
     }
 }
+//比價頁-你是不是想找?
+.price-hot-wrod{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include clearfix;
+    padding: 10px 0;
+    li{
+        width: 33.3%;
+        float: left;
+        border-bottom: 1px #a6a6a6 dashed;
+        @media (max-width: $screen-phone){
+            width: 100%;
+        }
+        a{
+            display: block;
+            color: #000;
+            padding: 5px 10px; 
+            &:hover{
+                color: $brand-primary;
+            }
+        }
+    }
+}
+//篩選燈箱
+.filter{
+    padding: 15px 30px;  
+    @include clearfix;    
+    ul{
+        list-style: none;
+        padding: 0;        
+        li{
+            .badge{
+                margin-left: 6px;
+                font-weight: normal;
+                font-size: 10px;
+                background-color: #a1a1a1;
+            }
+            .btn-primary{
+                @include border-radius(20px);
+                padding: 3px 8px 3px 3px;
+            }
+        }
+    }
+    >ul{        
+        border-bottom: 1px dashed #ccc;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        &:last-child{
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        >li{
+            font-weight: bold;      
+            > ul {
+                @include clearfix;
+                margin-top: 10px;
+                > li{                    
+                    float: left;
+                    display: block;
+                    width: 100%;
+                    margin-top: 5px;
+                    @media (min-width: $screen-phone){
+                        width: 50%;
+                    }
+                    label{
+                        font-weight: normal;
+                    }                    
+                }
+            }            
+        }         
+    }
+}
+.btn-block-half{
+    text-align: center;
+    @include clearfix;
+    .btn{
+        width: 48%;
+        float: left;   
+    }
+    .btn + .btn{
+        margin-left: 4%;
+    }
+} 
+//篩選checkbox樣式
+.checkbox-style{
+    label{
+        cursor: pointer;
+        .name{
+            color: $gray-light;
+        }     
+        .box{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #a1a1a1;
+            vertical-align: -3px;
+            border-radius: 2px;
+        }               
+        &:hover{            
+            .name{
+                color: $brand-primary;
+            }
+            .box{
+                border-color: $brand-primary;
+            }
+        }        
+        input[type="checkbox"]{
+            display: none;
+            &:checked + .box{    
+                border-color: $brand-primary;            
+                &:before{
+                    font: normal normal normal 14px/1 FontAwesome;
+                    content: "\f00c";
+                    vertical-align: 3px;
+                    color: $brand-primary;
+                }
+            }
+            &:checked ~ .name{
+                color: $brand-primary;
+            }
+        }        
+    }
+}
+.footer{    
+    color: #fff;
+    background-color: #4a4a4a;
+    text-align: center;
+    padding: 15px;
+    @media (max-width: $screen-phone){
+        background-color: transparent;
+        color: #777;
+    }    
+}
+//回頂端
+.backToTop{    
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
+    width: 60px;
+    height: 60px;    
+    line-height: 56px;
+    font-size: 32px;
+    @include border-radius(100%);    
+    @include transform(rotate(-45deg));  
+    &:after{
+        content: "\f135";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 31px;
+        color: #fff;      
+        @media (max-width: $screen-phone){
+            font-size: 26px;    
+        }       
+    }    
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+    @media (min-width: $screen-phone){
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            @include transition(all 0.3s);
+        }
+    }
+    @media (max-width: $screen-phone){
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 49px;     
+        background-color: rgba(0, 0, 0, 0.4);
+        &:focus,
+        &:hover,
+        &:active{
+            color: #fff;
+        }    
+    }
+}
+//熱搜tag
+.btn-tag-wrap{
+    margin: 10px 0;
+    @media(max-width: $screen-phone){
+        margin: 10px 10px;
+        height: 110px;
+        overflow: hidden;
+    }
+    .btn-tag{
+        margin: 3px 0;
+        border: 1px solid $brand-primary;
+        color: $brand-primary;
+        &:hover{
+            background-color: $brand-primary;
+            color: #fff;
+        }
+    }
+}
+
+//home
+// .home-wrap{
+//     padding-top: 10%;
+//     max-width: 600px;
+// }
+// .home{
+//     text-align: center;
+//     .home-header{
+//         text-align: center;
+//         .logo{
+//             display: inline-block;
+//         }
+//         p{
+//             color: $gray-base;            
+//         }
+//     }
+//     .home-body{
+//         .hot-tag-wrap{
+//             margin:20px 0;
+//         }
+//         .btn-tag-wrap{
+//             .btn-tag{
+//                 margin: 3px 0;
+//                 border: 1px solid $brand-primary;
+//                 color: $brand-primary;
+//                 &:hover{
+//                     background-color: $brand-primary;
+//                     color: #fff;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .home-footer{
+//     color: #777;
+//     text-align: center;
+//     padding: 15px;
+//     width: 100%;
+//     @media (min-width: 321px){
+//         position: fixed;
+//         bottom: 0;
+//     }
+// }
+
+
+//遮罩搭配all-menu使用
+.mask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 66px;
+    bottom: 0;
+    background-color: #000;
+    z-index: 10;
+    opacity: 1;
+    @include transition(opacity 5s linear);
+    &.fade{
+        opacity: 0.5;
+    }
+}
+
 //輪播
 .slider-container{
     margin-bottom: 5%;
@@ -1197,7 +1237,6 @@ a:focus{
     left: 0;
     right: 0;
     bottom: 10px;
-
     .item{
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
@@ -1209,7 +1248,7 @@ a:focus{
         }
     }
     @media(max-width: $screen-lg-desktop){
-        display: none;
+        display: none!important;
     }
 }
 
@@ -1321,30 +1360,13 @@ a:focus{
     }
 }
 //廣告
-.ad-wrap{
+.ad-wrap{    
     text-align: center;
     div{
         display: inline-block;
     }
 }
-//熱搜關鍵字
-.tt-01{
-    position: relative;
-    height: 1px;
-    border-bottom:1px solid #777;
-    margin: 15px 0;
-    margin-left: 170px;
-    span{
-        position: absolute;
-        display: inline-block;
-        color: #777;
-        left: -170px;
-        top: -23px;
-        font-size: 28px;
-
-    }
-}
-
+//價格區間bar
 .range-slider-wrap{
     width: 100%!important;
     .sliders{
@@ -1364,7 +1386,42 @@ a:focus{
         }
         span{
             font-size: 15px;
-            font-weight: bold;
         }
+    }
+}
+.mall-btn-wrap{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    z-index: 100;    
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+    li{        
+        display: inline-block;
+        .btn{
+            &.active,
+            &:hover{
+                background-color: #777;
+                color: #fff;
+            }
+        }
+    }
+}
+.index-banner-wrap{
+    width: 100%;
+    position: relative;
+    .mall{
+         .item{
+            margin-bottom: 5px;
+            display: block;
+            img{
+                width: 100%;
+            }
+        }   
     }
 }
