@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+    </style>
+</head>
+<body class="gray-bg">
+<nav class="navbar navbar-inverse" id="navbar">
+    <div class="container">
+        <div class="navbar-header">   
+            <div class="all-menu" id="mask-toggle">                   
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" id="all-menu-open"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
+                        <ul id="all-menu-wrap">
+                            <li class="phone-menu-control">
+                                <span>分類選單</span>
+                                <a href="javascript:void(0);" class="btn-close" id="all-menu-close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-switch">消費情報</a>
+                                <div class="menu menuBg-1">
+                                    <div class="TT">消費情報</div>
+                                    <div class="item col-item-4"><a href="" class="go tt">時尚穿搭</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">保養美妝</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">窈窕瘦身</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">親子寶貝</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">科技3C</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">生活風格</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">美食餐廳</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">健康養生</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">折扣優惠</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">休閒旅遊</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">藝文活動</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">消費權益</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">星光大道</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">兩性成長</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">即時新聞</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">隨便看看</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">精選情報</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">最新情報</a></div>
+                                    <div class="item col-item-4"><a href="" class="go tt">熱門情報</a></div>                                         
+                                </div>
+                            </li>                
+                            <li>
+                                <a href="javascript:void(0);" class="menu-switch">美妝</a>
+                                <div class="menu menuBg-2">
+                                    <div class="TT">美妝</div>
+                                    <div class="clearfix">
+                                        <div class="item col-item-4">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">臉部保養/清潔</a>                                        
+                                            <div class="detail">
+                                                <a href="">乳液</a>
+                                                <a href="">洗面乳</a>
+                                                <a href="">凝膠</a>
+                                                <a href="">精華液</a>
+                                                <a href="">面膜</a>
+                                                <a href="">眼霜</a>
+                                                <a href="">眼罩</a>
+                                                <a href="">唇膜</a>
+                                                <a href="">卸妝油</a>
+                                                <a href="">化妝水</a>
+                                                <a href="">粉刺清潔</a>
+                                                <a href="">日霜</a>
+                                                <a href="">晚霜</a>
+                                            </div>
+                                        </div>
+                                        <div class="item col-item-4">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">髮品保養/清潔</a>                      
+                                            <div class="detail">
+                                                <a href="">洗髮精</a>
+                                                <a href="">潤髮乳</a>
+                                                <a href="">造型髮品</a>
+                                                <a href="">染髮劑</a>
+                                                <a href="">假髮</a>
+                                                <a href="">髮飾/配件</a>
+                                                <a href="">美髮器材</a>
+                                            </div>
+                                        </div>       
+                                        <div class="item col-item-4">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">身體保養/清潔</a>                                                                         
+                                            <div class="detail">
+                                                <a href="">沐浴乳</a>
+                                                <a href="">手工皂</a>
+                                                <a href="">肥皂/香皂</a>
+                                                <a href="">去角質</a>
+                                                <a href="">潤膚乳液</a>
+                                                <a href="">浴帽/浴袍</a>
+                                                <a href="">防曬</a>
+                                                <a href="">防蚊</a>
+                                                <a href="">香膏</a>
+                                                <a href="">護手霜</a>
+                                                <a href="">護足霜</a>
+                                                <a href="">乾洗手</a>
+                                                <a href="">足部去角質</a>
+                                                <a href="">私密護理</a>
+                                                <a href="">口腔清潔</a>
+                                                <a href="">身體乳液</a>
+                                            </div>
+                                        </div>    
+                                        <div class="item col-item-4">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">彩妝/指彩</a>                                      
+                                            <div class="detail">
+                                                <a href="">臉部彩妝</a>
+                                                <a href="">手部彩妝</a>
+                                                <a href="">身體彩繪</a>
+                                                <a href="">彩妝用具/刷具</a>               
+                                            </div>
+                                        </div>      
+                                        <div class="item col-item-4">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">香水/精油</a>                                            
+                                            <div class="detail">
+                                                <a href="">女性香水</a>
+                                                <a href="">中性香水</a>
+                                                <a href="">男性香水</a>
+                                                <a href="">香氛</a>
+                                                <a href="">精油</a>               
+                                            </div>
+                                        </div>           
+                                        <div class="item col-item-4">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">男仕保養/清潔</a>                                           
+                                            <div class="detail">
+                                                <a href="">臉部清潔</a>
+                                                <a href="">臉部保養</a>
+                                                <a href="">頭髮護理</a>
+                                                <a href="">刮鬍用品</a>
+                                                <a href="">身體清潔保養</a>               
+                                            </div>
+                                        </div> 
+                                        <div class="item">
+                                            <a href="#" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">推薦品牌</a>                                           
+                                            <div class="detail">                                                                               
+                                                <a href="/x/iguang/Aderma" target="_blank" _hover-ignore="1">Aderma艾芙美</a>
+                                                <a href="/x/iguang/Avene" target="_blank">Avene雅漾</a>
+                                                <a href="/x/iguang/Arin" target="_blank">Arin氧潤藥妝</a>
+                                                <a href="/x/iguang/BIONEO" target="_blank">BIONEO德國百妮</a>
+                                                <a href="/x/iguang/Bioderma" target="_blank">Bioderma貝德瑪</a>
+                                                <a href="/x/iguang/Biopeutic" target="_blank">Biopeutic葆療美</a>
+                                                <a href="/x/iguang/BIOFLASH" target="_blank">BIOFLASH碧芙蕾詩</a>
+                                                <a href="/x/iguang/Cetaphil" target="_blank">Cetaphil舒特膚</a>
+                                                <a href="/x/iguang/Dermagor" target="_blank">Dermagor朵瑪</a>
+                                                <a href="/x/iguang/Dermesisl%E8%BF%AA%E6%95%8F%E6%96%BD" target="_blank">Dermesisl迪敏施</a>
+                                                <a href="/x/iguang/%E6%9C%B5%E7%92%BD" target="_blank">Dr.Douxi朵璽</a>
+                                                <a href="/x/iguang/Dr%20Mainz%20%E9%BA%A5%E8%8C%B5%E8%8C%B2" target="_blank">Dr Mainz 麥茵茲</a>
+                                                <a href="/x/iguang/Dr.Wu" target="_blank">Dr.Wu</a>
+                                                <a href="/x/iguang/Ducray%E8%AD%B7%E8%95%BE" target="_blank">Ducray護蕾</a>
+                                                <a href="/x/iguang/Elancyl%E4%BC%8A%E8%98%AD%E7%BA%96%E5%A7%BF" target="_blank">Elancyl伊蘭纖姿</a>
+                                                <a href="/x/iguang/Kinerase%E5%87%B1%E5%A8%9C%E8%A9%A9" target="_blank">Kinerase凱娜詩</a>
+                                                <a href="/x/iguang/Klorane%E8%94%BB%E7%BE%85%E8%98%AD" target="_blank">Klorane蔻羅蘭</a>
+                                                <a href="/x/iguang/LaRochePosay%E7%90%86%E8%86%9A%E5%AF%B6%E6%B0%B4" target="_blank">LaRochePosay理膚寶水</a>
+                                                <a href="/x/iguang/Mustela%E6%85%95%E4%B9%8B%E6%81%AC%E5%BB%8A" target="_blank">Mustela慕之恬廊</a>
+                                                <a href="/x/iguang/Neogence%E9%9C%93%E6%B7%A8%E6%80%9D" target="_blank">Neogence霓淨思</a>
+                                                <a href="/x/iguang/NeoStrata%E5%A6%AE%E5%82%B2%E7%B5%B2%E7%BF%A0" target="_blank">NeoStrata妮傲絲翠</a>
+                                                <a href="/x/iguang/Neova%E5%A6%AE%E6%AD%90%E7%93%A6" target="_blank">Neova妮歐瓦</a>
+                                                <a href="/x/iguang/Nov%E5%A8%9C%E8%8A%99" target="_blank">Nov娜芙</a>
+                                                <a href="/x/iguang/NUXE%E9%BB%8E%E5%8F%AF%E8%A9%A9" target="_blank">NUXE黎可詩</a>
+                                                <a href="/x/iguang/PhytoC%E6%AD%90%E7%91%AA" target="_blank">PhytoC歐瑪</a>
+                                                <a href="/x/iguang/Sebamed%E6%96%BD%E5%B7%B4" target="_blank">Sebamed施巴</a>
+                                                <a href="/x/iguang/%E6%A3%AE%E5%A8%9C%E5%A7%AC" target="_blank">Synergie Skin森娜姬</a>
+                                                <a href="/x/iguang/Transino%E5%82%B3%E7%9A%99%E5%A8%9C" target="_blank">Transino傳皙娜</a>
+                                                <a href="/x/iguang/Vichy%E8%96%87%E5%A7%BF" target="_blank">Vichy薇姿</a>
+                                                <a href="/x/iguang/%E6%9D%9C%E5%85%8BC-Skin" target="_blank">杜克C-Skin</a>
+                                                <a href="/x/iguang/%E8%88%B9%E4%BA%95I-DO%E9%86%AB%E6%9C%B5" target="_blank">船井I-DO醫朵</a>
+                                                <a href="/x/iguang/%E6%A3%AE%E7%94%B0%E8%97%A5%E5%A6%9D" target="_blank">森田藥妝</a>
+                                                <a href="/x/iguang/%E5%AF%B5%E6%84%9B%E4%B9%8B%E5%90%8D" target="_blank">寵愛之名</a>
+                                                <a href="/x/iguang/%E9%9F%93%E5%9C%8BLJH%E9%BA%97%E7%B7%BB%E9%9F%93" target="_blank">韓國LJH麗緻韓</a>
+                                                    
+                                            </div>
+                                        </div> 
+                                    </div>                                                                                                      
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-switch">衣服</a>
+                                <div class="menu menuBg-3">
+                                    <div class="TT">衣服</div>
+                                    <div class="clearfix">
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">女裝</a>                                        
+                                            <div class="detail">
+                                                <a href="">外套</a>
+                                                <a href="">上衣</a>
+                                                <a href="">裙子</a>
+                                                <a href="">洋裝</a>
+                                                <a href="">中大尺寸女裝</a>
+                                                <a href="">機能服</a>
+                                                <a href="">穿搭配件</a>
+                                                <a href="">女性內睡衣</a>
+                                                <a href="">女泳裝</a>
+                                                <a href="">塑身衣</a>
+                                                <a href="">襯衫</a>
+                                                <a href="">針織衫</a>
+                                                <a href="">禮服</a>
+                                                <a href="">POLO衫</a>
+                                                <a href="">T桖</a>
+                                                <a href="">背心</a>
+                                                <a href="">長褲</a>
+                                                <a href="">短褲</a>
+                                                <a href="">長裙</a>
+                                                <a href="">短裙</a>
+                                                <a href="">發熱衣</a>
+                                            </div>
+                                        </div>
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">童裝</a>                                            
+                                            <div class="detail">
+                                                <a href="">小小童裝(0~2歲)</a>
+                                                <a href="">童裝</a>
+                                                <a href="">兒童穿搭配件</a>
+                                                <a href="">兒童泳裝</a>                        
+                                            </div>
+                                        </div>       
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">男裝</a>                                            
+                                            <div class="detail">
+                                                <a href="">外套</a>
+                                                <a href="">上衣</a>
+                                                <a href="">裙子</a>
+                                                <a href="">洋裝</a>
+                                                <a href="">中大尺寸女裝</a>
+                                                <a href="">機能服</a>
+                                                <a href="">穿搭配件</a>
+                                                <a href="">女性內睡衣</a>
+                                                <a href="">女泳裝</a>
+                                                <a href="">塑身衣</a>
+                                                <a href="">襯衫</a>
+                                                <a href="">針織衫</a>
+                                                <a href="">禮服</a>
+                                                <a href="">POLO衫</a>
+                                                <a href="">T桖</a>
+                                                <a href="">背心</a>
+                                                <a href="">長褲</a>
+                                                <a href="">短褲</a>
+                                                <a href="">長裙</a>
+                                                <a href="">短裙</a>
+                                                <a href="">發熱衣</a>
+                                            </div>
+                                        </div>    
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">化妝晚會/舞台表演</a>                                            
+                                            <div class="detail">
+                                                <a href="">大人變裝</a>
+                                                <a href="">小孩變裝</a>
+                                                <a href="">變裝配件</a>
+                                                <a href="">萬聖節服裝</a>               
+                                            </div>
+                                        </div>      
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">運動服飾</a>                                            
+                                            <div class="detail">
+                                                <a href="">運動背心</a>
+                                                <a href="">運動T桖</a>
+                                                <a href="">運動外套</a>
+                                                <a href="">運動褲</a>                                               
+                                            </div>
+                                        </div>                                  
+                                    </div>                            
+                                    <div class="TT">推薦品牌</div>
+                                    <div class="clearfix" style="display: none;">
+                                        <div class="item">
+                                            <div class="detail">
+                                                <a href="">臉部清潔</a>
+                                                <a href="">臉部保養</a>
+                                                <a href="">頭髮護理</a>
+                                                <a href="">刮鬍用品</a>
+                                                <a href="">身體清潔保養</a> 
+                                            </div>
+                                        </div>    
+                                    </div>                                                        
+                                </div>
+                            </li>                 
+                            <li>
+                                <a href="javascript:void(0);" class="menu-switch">鞋子</a>
+                                <div class="menu menuBg-3">
+                                    <div class="TT">鞋子</div>
+                                    <div class="clearfix">
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">女鞋</a>                                        
+                                            <div class="detail">
+                                                <a href="">女鞋 1</a>
+                                                <a href="">女鞋 2</a>
+                                                <a href="">女鞋 3</a>
+                                                <a href="">女鞋 4</a>
+                                                <a href="">女鞋 5</a>
+                                                <a href="">女鞋 6</a>
+                                                <a href="">女鞋 7</a>
+                                                <a href="">女鞋 8</a>
+                                                <a href="">女鞋 9</a>
+                                                <a href="">女鞋 10</a>                                 
+                                            </div>
+                                        </div>
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">童鞋</a>                                            
+                                            <div class="detail">
+                                                <a href="">童鞋 1</a>
+                                                <a href="">童鞋 2</a>
+                                                <a href="">童鞋 3</a>
+                                                <a href="">童鞋 4</a>
+                                                <a href="">童鞋 5</a>
+                                                <a href="">童鞋 6</a>
+                                                <a href="">童鞋 7</a>
+                                                <a href="">童鞋 8</a>
+                                                <a href="">童鞋 9</a>
+                                                <a href="">童鞋 10</a>                      
+                                            </div>
+                                        </div>       
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">男鞋</a>                                            
+                                            <div class="detail">
+                                                <a href="">男鞋 1</a>
+                                                <a href="">男鞋 2</a>
+                                                <a href="">男鞋 3</a>
+                                                <a href="">男鞋 4</a>
+                                                <a href="">男鞋 5</a>
+                                                <a href="">男鞋 6</a>
+                                                <a href="">男鞋 7</a>
+                                                <a href="">男鞋 8</a>
+                                                <a href="">男鞋 9</a>
+                                                <a href="">男鞋 10</a>        
+                                            </div>
+                                        </div>    
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">運動鞋</a>                                            
+                                            <div class="detail">
+                                                <a href="">運動鞋 1</a>
+                                                <a href="">運動鞋 2</a>
+                                                <a href="">運動鞋 3</a>
+                                                <a href="">運動鞋 4</a>
+                                                <a href="">運動鞋 5</a>
+                                                <a href="">運動鞋 6</a>
+                                                <a href="">運動鞋 7</a>
+                                                <a href="">運動鞋 8</a>
+                                                <a href="">運動鞋 9</a>
+                                                <a href="">運動鞋 10</a>            
+                                            </div>
+                                        </div>      
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">功能鞋</a>                                            
+                                            <div class="detail">
+                                                <a href="">功能鞋 1</a>
+                                                <a href="">功能鞋 2</a>
+                                                <a href="">功能鞋 3</a>
+                                                <a href="">功能鞋 4</a>
+                                                <a href="">功能鞋 5</a>
+                                                <a href="">功能鞋 6</a>
+                                                <a href="">功能鞋 7</a>
+                                                <a href="">功能鞋 8</a>
+                                                <a href="">功能鞋 9</a>
+                                                <a href="">功能鞋 10</a>                                              
+                                            </div>
+                                        </div>     
+                                        <div class="item col-item-4">
+                                            <a href="" class="see-all">看全部</a>
+                                            <a href="javascript:void(0);" class="tt detail-switch">鞋靴配件</a>                                            
+                                            <div class="detail">
+                                                <a href="">鞋靴配件 1</a>
+                                                <a href="">鞋靴配件 2</a>
+                                                <a href="">鞋靴配件 3</a>
+                                                <a href="">鞋靴配件 4</a>
+                                                <a href="">鞋靴配件 5</a>                                             
+                                            </div>
+                                        </div>                             
+                                    </div>                            
+                                    <div class="TT">推薦品牌</div>
+                                    <div class="clearfix" style="display: none;">
+                                        <div class="item">
+                                            <div class="detail">
+                                                <a href="">臉部清潔</a>
+                                                <a href="">臉部保養</a>
+                                                <a href="">頭髮護理</a>
+                                                <a href="">刮鬍用品</a>
+                                                <a href="">身體清潔保養</a> 
+                                            </div>
+                                        </div>    
+                                    </div>                                                        
+                                </div>
+                            </li>              
+                            <li><a href="">箱包</a></li>
+                            <li><a href="">配飾</a></li>
+                            <li><a href="">3C</a></li>
+                            <li><a href="">家電</a></li>
+                            <li><a href="">母嬰</a></li>
+                            <li><a href="">食品</a></li>
+                            <li><a href="">家居</a></li>
+                            <li><a href="">休閒</a></li>
+                            <li><a href="">圖書</a></li>
+                            <li><a href="">票券</a></li>
+                        </ul>
+                    </li>                    
+                </ul>
+            </div>
+            <a class="navbar-brand c-navbar-brand" href="home.html">
+                <img src="http://s2.sina.tw/assets/images/sinalogo_b.d426f021a3.png" height="40" alt="新浪台灣">
+            </a>
+        </div>  
+        <form action="" class="search-bar">
+            <div class="input-group input-group-lg">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">分類</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">商品</a></li>
+                        <li><a href="#">團購</a></li>
+                        <li><a href="#">福利品</a></li>
+                        <li><a href="#">代購</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>                     
+                <input type="text" class="form-control" name="x" placeholder="請輸入你想搜尋的商品">
+                <span class="input-group-btn">
+                    <button class="btn btn-warning" type="button"><i class="fa fa-search fa-fw fa-lg"></i></button>
+                </span>
+            </div>
+        </form>                       
+    </div>
+</nav>        
+<div class="container" id="offsetTop"> 
+    <div class="row">
+        <div class="col-md-12 ">      
+            <ul class="c-nav-tabs">
+                <li class="active"><a href="#">熱搜關鍵字</a></li>                                
+            </ul>
+            <div class="btn-tag-wrap hot-tag-wrap">                
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂1</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂2</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂3</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂4</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂5</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂6</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂7</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂8</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂9</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂10</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂11</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂12</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂13</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂14</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂15</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂16</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂17</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂18</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂19</a>          
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂1</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂2</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂3</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂4</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂5</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂6</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂7</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂8</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂9</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂10</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂11</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂12</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂13</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂14</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂15</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂16</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂17</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂18</a>
+                <a href="index.html" class="btn btn-tag btn-sm">任天堂19</a>        
+            </div>
+        </div> 
+        <div class="col-md-9 ">
+            <ul class="c-nav-tabs">
+                <li class="active"><a href="#">今日特惠</a></li>               
+            </ul> 
+            <div class="loading-block" style="display: block;">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            </div>            
+            <div class="lg-slider-for" style="display:none;">
+                <a href="#">
+                    <img class="img-responsive" data-lazy="http://rd.youthwant.com/pic/10000030/1000003000/1000035319.jpg" alt="">
+                </a>
+                <a href="#">
+                    <img class="img-responsive" data-lazy="http://rd.youthwant.com/pic/10000028/1000002807/1000035315.jpg" alt="">  
+                </a>
+                <a href="#">
+                    <img class="img-responsive" data-lazy="http://rd.youthwant.com/pic/10000030/1000003000/1000035312.jpg" alt="">
+                </a>    
+                <a href="#">
+                    <img class="img-responsive" data-lazy="http://rd.youthwant.com/pic/10000030/1000003000/1000035319.jpg" alt="">
+                </a>
+                <a href="#">
+                    <img class="img-responsive" data-lazy="http://rd.youthwant.com/pic/10000028/1000002807/1000035315.jpg" alt="">  
+                </a>
+                <a href="#">
+                    <img class="img-responsive" data-lazy="http://rd.youthwant.com/pic/10000030/1000003000/1000035312.jpg" alt="">
+                </a> 
+            </div>
+            <div class="lg-slider-nav" style="display:none;">
+                <div class="item">我的冬日好生活</div>
+                <div class="item">有禮真好</div>
+                <div class="item">聖誕節禮物</div>    
+                <div class="item">我的冬日好生活1</div>
+                <div class="item">有禮真好2</div>
+                <div class="item">聖誕節禮物3</div> 
+            </div>                          
+        </div>
+        <div class="col-md-3 col-sm-5 ">
+            <div class="xs-slider">                
+                <ul class="c-nav-tabs">
+                    <li class="active"><a href="#">推薦商品</a></li>               
+                </ul>  
+                <div class="xs-slider-nav">
+                    <a href="javascript:void(0);" data-tp="0" class="btn btn-default btn-xs active">1</a>
+                    <a href="javascript:void(0);" data-tp="1" class="btn btn-default btn-xs">2</a>   
+                    <a href="javascript:void(0);" data-tp="2" class="btn btn-default btn-xs">3</a>    
+                </div>
+                <div class="xs-slider-for">
+                    <div class="item">
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e133.jpg?t=1480658236893" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    全智賢人魚水潤肌<br>肌研熱銷夯貨<br>滿588現折100
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        2,999
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>       
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e133.jpg?t=1480658236893" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    全智賢人魚水潤肌<br>肌研熱銷夯貨<br>滿588現折100
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        2,999
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e133.jpg?t=1480658236893" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    全智賢人魚水潤肌<br>肌研熱銷夯貨<br>滿588現折100
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        2,999
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>                                                                                              
+                    </div>   
+                    <div class="item" style="display:none;">                       
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e130.jpg?t=1480475909028" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    專櫃開架彩妝<br>人氣限量秒搶<br>破盤$12up
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        2,000
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e130.jpg?t=1480475909028" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    專櫃開架彩妝<br>人氣限量秒搶<br>破盤$12up
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        2,000
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e130.jpg?t=1480475909028" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    專櫃開架彩妝<br>人氣限量秒搶<br>破盤$12up
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        2,000
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>                           
+                    </div>           
+                    <div class="item" style="display:none;">
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e142.jpg?t=1480651510016" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    任2件五折<br>專櫃超值組<br>不再補貨199up件
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        999
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e142.jpg?t=1480651510016" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    任2件五折<br>專櫃超值組<br>不再補貨199up件
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        999
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>
+                        <a href="#"> 
+                            <div class="item-right">
+                                <img src="http://img3.momoshop.com.tw/ecm/img/online/10/000/00/000/bt_0_209_01/bt_0_209_01_e142.jpg?t=1480651510016" alt="">
+                            </div>
+                            <div class="item-left">
+                                <div class="info">
+                                    任2件五折<br>專櫃超值組<br>不再補貨199up件
+                                </div>
+                                <div class="price">
+                                    <i>$</i>
+                                    <span>
+                                        999
+                                    </span>
+                                </div>
+                            </div>                            
+                        </a>                           
+                    </div>       
+                </div>                    
+            </div>  
+        </div>                                         
+    </div>
+</div>
+<footer class="footer">    
+    <div class="container">
+        2000-2016. All rights reserved.
+    </div>
+</footer>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/xs-slider.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/index-slider.js"></script>
+</body>
+</html>
+
+
+
