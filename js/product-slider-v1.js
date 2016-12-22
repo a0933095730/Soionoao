@@ -4,8 +4,7 @@
 //尺寸都可
 //jqeury.js
 //slick.js
-//rwd-slider.js
-//不需要任何其他的套件
+//product-slider-v1.js.js
 
 $(document).on('ready', function () {
     $(".responsive").slick({     
