@@ -9,7 +9,6 @@ $('.mall-btn-wrap').on('click','a',function(){
     $('.mall-btn-wrap').find('a').removeClass('active');
     if(flag == 0){        
         $this.addClass('active');
-        $('html,body').animate({scrollTop: targetMall.offset().top -offsetTopValue},500);
-        
+        $('html,body').animate({scrollTop: targetMall.offset().top - offsetTopValue},500);
     }    
 });
