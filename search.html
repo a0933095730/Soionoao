@@ -475,15 +475,16 @@
                     </div> 
                 </div>    
                 <div class="pull-left">                   
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#filter">
-                        <span id="search_concept">進階篩選</span> <span class="caret"></span>
+                    <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#filter">
+                        <span id="search_concept">進階篩選</span>
+                        <span class="caret"></span>
                     </button>                                 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <span class="phone-hide">排序：</span><span>相關</span>
+                        <button type="button" id="Text" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="phone-hide">排序：</span><span class="spanText">相關</span>
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu" id="relaceText" role="menu">
                             <li><a href="#">相關</a></li>
                             <li><a href="#">最新</a></li>
                             <li><a href="#">高價</a></li>
@@ -1159,6 +1160,7 @@
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/replace-text.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script>
     var nonLinearSlider = document.getElementById('nonlinear');
