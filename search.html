@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -421,9 +421,11 @@
             <div class="input-group input-group-lg">
                 <div class="input-group-btn search-panel">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <span id="search_concept">分類</span> <span class="caret"></span>
+                        <span class="spanText">全部</span>
+                        <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" role="menu">
+                    <ul class="dropdown-menu relaceText" role="menu">
+                        <li><a href="#">全部</a></li>
                         <li><a href="#">商品</a></li>
                         <li><a href="#">團購</a></li>
                         <li><a href="#">福利品</a></li>
@@ -480,11 +482,11 @@
                         <span class="caret"></span>
                     </button>                                 
                     <div class="btn-group">
-                        <button type="button" id="Text" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="phone-hide">排序：</span><span class="spanText">相關</span>
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu" id="relaceText" role="menu">
+                        <ul class="dropdown-menu relaceText" role="menu">
                             <li><a href="#">相關</a></li>
                             <li><a href="#">最新</a></li>
                             <li><a href="#">高價</a></li>
@@ -1015,7 +1017,6 @@
                 <span class="tt">價格</span>
                 <ul>
                     <li class="range-slider-wrap">
-                        <!--<img src="images/control-bar.png" alt="" style="max-width: 100%;">-->
                         <div class="sliders" id="nonlinear"></div>
                         <div class="price">
                             <i>$</i>
@@ -1094,8 +1095,7 @@
                             <span class="box"></span>
                             <span class="name">Myfone購物網</span><span class="badge">32</span>
                         </label>
-                    </li>
-                    </li>
+                    </li>          
                 </ul>
             </li>
         </ul>      
@@ -1160,7 +1160,6 @@
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/replace-text.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script>
     var nonLinearSlider = document.getElementById('nonlinear');

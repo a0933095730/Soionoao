@@ -21,6 +21,12 @@ a:focus{
     color: $brand-primary;
     font-weight: bold;
 }
+@mixin img-height{
+    position: relative;
+    height: 100%;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
 $all-menu-height: 500px;
 $menu-display: none;
 //1320
@@ -416,9 +422,13 @@ $menu-display: none;
     margin-bottom: 20px;
     section{
         background-color: #fff;
+        table{
+            width: 100%!important;
+            max-width: 100%!important;
+        }            
         img{
-            max-width: 100%;
-        }
+            max-width: 100%!important;
+        }        
     }
 }
 .wrap{    
@@ -553,11 +563,19 @@ $menu-display: none;
         .btn-link{
             color: #777;
             @include transition(all 0.3s);
-            &:hover,
+            &:hover{
+                color: $brand-primary;
+                text-decoration: none;
+                @media (max-width: $screen-tablet){
+                    color: #777;
+                }
+            }
             &.active{
                 color: $brand-primary;
                 text-decoration: none;
             }
+
+            
         }
     }
     //卡片式
@@ -825,6 +843,11 @@ $menu-display: none;
     padding: 20px;
     border-bottom: 1px dashed #ddd;
     display: block;
+
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+
     @include clearfix;
     &:last-child{
         border-bottom: 0;
@@ -846,20 +869,20 @@ $menu-display: none;
         }
     }
     .price-list-left{
-        width: 100px;
-        height: 30px;
-        overflow: hidden;  
-        float: left;      
+        width: 90px;
+        height: 90px;  
         img{
-            width: 100%;
+            @include img-height;
         }
     }
     .price-list-body{
         display: flex;
         word-break: break-all;
-        margin-left: 100px;
+        margin-left: 30px;
+        width: 100%;
         @media (max-width: $screen-phone){
             display: block;
+            margin-left: 10px;
         }
         h3{
             flex: 1;
@@ -1210,7 +1233,7 @@ $menu-display: none;
     position: fixed;
     left: 0;
     right: 0;
-    top: 66px;
+    top: 0;
     bottom: 0;
     background-color: #000;
     z-index: 10;
@@ -1334,7 +1357,7 @@ $menu-display: none;
             height: 180px;
             overflow: hidden;
             img{
-                height: 100%;
+                @include img-height;
             }
         }
         .slider-bd{
@@ -1349,6 +1372,8 @@ $menu-display: none;
                 font-size: 16px;
                 color: #000;
                 margin-top: 0;
+                height: 35px;
+                overflow: hidden;
             }
             .price{
                 i{
