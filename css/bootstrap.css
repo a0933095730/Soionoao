@@ -3934,12 +3934,6 @@ tbody.collapse.in {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (max-width: 480px) {
-  /* line 11, ../sass/bootstrap/_navbar.scss */
-  .navbar {
-    margin-bottom: 10px;
-  }
-}
 /* line 14, ../sass/bootstrap/mixins/_clearfix.scss */
 .navbar:before, .navbar:after {
   content: " ";

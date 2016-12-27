@@ -13,9 +13,9 @@
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: $navbar-margin-bottom;
   border: 1px solid transparent;
-  @media (max-width: $screen-phone){
-    margin-bottom: 10px;
-  }
+  // @media (max-width: $screen-phone){
+  //   margin-bottom: 0;
+  // }
 
   // Prevent floats from breaking the navbar
   @include clearfix;

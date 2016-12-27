@@ -466,6 +466,9 @@ $menu-display: none;
         color: $brand-primary;
         font-weight: bold;
         margin-top: 10px;
+        @media(max-width: $screen-tablet){
+            margin-top: 0;
+        }
     }
     .info-left{//找到N筆
         float: left;
