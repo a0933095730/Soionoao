@@ -1,9 +1,7 @@
 README
 ==
-將原本網站改成Response Web Design，使用一些CSS3特效搭配jQuery。github裡面某些檔案是說明檔或者留存紀錄用途，請針對下方列出的頁面觀看即可。
-- main.html（首頁）
-- hashTag.html（列表頁）
-- personal.html（個人頁）
-- page.html（內頁）
-- fans100.html（百大粉絲頁）
-- setting.html（設定頁）
+一個RWD的比價網站，內容包含menu、首頁、商品頁、比價頁。使用模擬器操作menu時，要先重新整理才可以讀取到正確的js檔案，資料夾內的某些檔案為舊版留存或者說明文件，請針對下方列表頁面觀看即可。
+- index.html（首頁）
+- search.html（商品頁）
+- price.html（比價頁）
+
