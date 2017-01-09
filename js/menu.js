@@ -46,13 +46,13 @@ if ( $(window).width() <= 992 ){
     $('.detail-switch').click(function(){
         var $this = $(this);
         var flag = 0;
-        if ( $this.hasClass('active') == true){
+        if ( $this.prev().hasClass('active') == true){
             flag = 1;
         }
-        $('.detail-switch').removeClass('active');
+        $('.detail-switch').prev().removeClass('active');
         $('.detail').slideUp(); 
         if ( flag == 0 ){
-            $this.addClass("active");
+            $this.prev().addClass("active");
             $(this).next('.detail').slideToggle(); 
         }   
     });

@@ -27,6 +27,7 @@ a:focus{
     left: 50%;
     @include transform(translateX(-50%));
 }
+// $all-menu-height: 750px;
 $all-menu-height: 500px;
 $menu-display: none;
 //1320
@@ -101,6 +102,9 @@ $menu-display: none;
         margin-top: 145px;
     }
 }
+.section-padding{
+    padding: 0 5px;
+}
 .loading-block{
     text-align: center;
     padding: 5% 0;
@@ -148,6 +152,8 @@ $menu-display: none;
                 list-style: none;
                 padding: 0;
                 margin: 0;
+                max-height: 215px;
+                overflow-y: scroll;
                 li{
                     a{
                         display: block;
@@ -274,6 +280,10 @@ $menu-display: none;
                                         transform: translateY(-50%);
                                         color: $brand-primary; 
                                     }
+                                    &.active{
+                                        color:#961c1a;
+                                        text-decoration: underline;
+                                    }
                                     &.active:before{
                                         content: "\f0d8";
                                         color: #961c1a;
@@ -285,9 +295,9 @@ $menu-display: none;
                                 >.see-all{                                                 
                                     position: absolute;  
                                     top: 5px;                 
-                                    right: 5px;                                                   
+                                    right: 10px;                                                   
                                     z-index: 2;                                        
-                                    padding: 3px 5px;
+                                    padding: 3px 8px;
                                     background: #a1a1a1;
                                     color: #fff;
                                     border-radius: 6px;                                                                               
@@ -401,9 +411,37 @@ $menu-display: none;
                                 display: $menu-display;
                                 background-repeat: no-repeat;
                                 background-position: right bottom;
-                                &.menuBg-1{
+                                &.menuBg-1{//情報
                                     background-image: url(http://www.obj.com.au/images/images/image-sk2-cosmetic-skincare-product.png);
                                 }
+                                &.menuBg-2{//美妝
+                                    background-image: url(http://img.vogue.com.tw/userfiles/FCK/2015121444973305.png);
+                                    background-size: 70%;
+                                }
+                                &.menuBg-3{//衣服
+                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_b_nav.png);
+                                    background-size: 110%;
+                                    background-position: 40px 208px;
+                                }
+                                &.menuBg-4{//鞋子
+                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_C_menu_bg.png);
+                                    background-size: 96%;
+                                    background-position: 64px 226px;
+                                }
+                                &.menuBg-5{//3C
+
+                                }
+                                &.menuBg-6{//食品
+                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_J_menu_bg.png);
+                                }
+                                &.menuBg-7{//家居
+                                    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/img16/home/flyout/1001448_us_home_flyout-rev_us_v8._CB282183027_.png);
+                                    background-size: 76%;
+                                }
+                                &.menuBg-8{//居家生活
+                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_H_menu_bg.png);
+                                    background-position: 0 113px;
+                                }                                
                                 .TT{
                                     @include main-title;
                                 }
@@ -460,7 +498,11 @@ $menu-display: none;
 .mode-wrap{
     margin-bottom: 20px;
     section{
+        &:nth-child(3){
+            padding: 0 5px;
+        }
         background-color: #fff;
+        overflow-x: scroll;
         table{
             width: 100%!important;
             max-width: 100%!important;
@@ -562,6 +604,7 @@ $menu-display: none;
             a{
                 color: #000;
                 display: block;
+                word-break: break-all;
                 &:hover{
                 color: #00adff;
                 }
@@ -570,7 +613,7 @@ $menu-display: none;
         .price{            
             color: $brand-primary;
             font-weight: bold;
-            margin: 10px 0;
+            margin: 5px 0;
             font-size: 12px;
             i{
                 font-family: Arial;
@@ -694,10 +737,17 @@ $menu-display: none;
             .wrap{           
                 list-style: none;
                 padding: 0;
-                margin: 0;
+                margin: 0;                
                 li{
-                    &:nth-child(2){
+                    &:nth-child(1){
                         display: none;
+                    }
+                    &:nth-child(2){
+                        width: 100%;
+                        text-align: right;
+                        @media(max-width: $screen-phone){
+                            text-align: center;
+                        }
                     }
                     .btn-link{
                         position: absolute;
@@ -747,6 +797,9 @@ $menu-display: none;
             .tt{            
                 font-size: 2.4rem;           
                 margin: 10px 0 20px 0;
+                @media (max-width: $screen-tablet){
+                    font-size: 2rem;
+                }
                 @media (max-width: $screen-phone){
                     font-size: 1.6rem;
                     margin: 5px 0 10px 0;
@@ -778,6 +831,11 @@ $menu-display: none;
                 list-style: none;
                 margin-bottom: 0;
                 padding: 0;
+                li{
+                    &:nth-child(1){
+                        display: none;
+                    }
+                }
             }
             @media (max-width: $screen-phone){
                 width: 100%;
@@ -790,8 +848,11 @@ $menu-display: none;
                     width: 100%;                    
                     @include clearfix;
                     li{
-                        width: 50%;
+                        width: 100%;
                         float: left;
+                        .btn{
+                            width: 50%;
+                        }                                           
                     }
                 }
             }            
@@ -809,11 +870,42 @@ $menu-display: none;
         &:hover{
             box-shadow: none;
         }
+        .product-body{
+            .mall{
+                border-top: 1px dashed #ccc;
+                padding-top: 14px;
+                @include clearfix;
+                img{
+                    width: 110px;
+                    float: left;
+                    @media (max-width: $screen-phone){
+                        width: 90px;
+                    }
+                }
+                .btn{
+                    float: right;
+                    @media (max-width: $screen-phone){
+                        display: none;
+                    }
+                }
+            }
+            // .price{
+            //     span{
+            //         font-size: 20px;
+            //     }
+            // }
+        }
         .product-left{
             margin-left: 20px;
             height: 200px;
+            width: 200px;
+            @media (max-width: $screen-tablet){
+                width: 150px;
+                height: 150px;
+            }
             @media (max-width: $screen-phone){
                 height: 100px;
+                width: 100px;
                 margin-left: 0;
             }
         }
