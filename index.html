@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/custom.css">
-
-    <style>
-    </style>
+    <!--ico-->
+    <link href="http://sf.sina.com.tw/favicon.ico" rel="shortcut icon">
 </head>
 <body class="gray-bg">
 <nav class="navbar navbar-inverse" id="navbar">
@@ -703,7 +702,7 @@
                 </ul>            
             </div>
             <a class="navbar-brand c-navbar-brand" href="index.html">
-                <img src="http://s2.sina.tw/assets/images/sinalogo_b.d426f021a3.png" height="40" alt="新浪台灣">
+                <img src="images/buy.sina.logo.png" height="40" alt="新浪台灣">
             </a>
         </div>  
         <form action="" class="search-bar">
@@ -752,7 +751,7 @@
                 <a href="search.html" class="btn btn-tag btn-sm">滑鼠</a>                                                
             </div>
         </div> 
-        <div class="col-md-8">
+        <div class="col-lg-9 col-md-8">
             <ul class="c-nav-tabs">
                 <li class="active"><a href="#">今日特惠</a></li>                           
             </ul>    
@@ -801,8 +800,9 @@
                 </div>                               
             </div>                                                                                      
         </div>
-        <div class="col-md-4"> 
-            <div class="ad-wrap">
+        <div class="col-lg-3 col-md-4"> 
+            <div id="floattag"></div>
+            <div class="ad-wrap" id="googlead_float">
                 <img src="https://ap-static.sociomantic.com/static/84264_5" alt="">    
             </div>            
         </div>                                         
@@ -820,6 +820,35 @@
 <script src="js/slick.js"></script>
 <script src="js/index-slider.js"></script>-->
 <script src="js/mall-scrolltop.js"></script>
+<script>
+    $(window).scroll(function(){
+        //divTop         = $('#googleAD3').offset().top,
+        //divHeight      = $('#googleAD3').height(),
+        var scroTop        = $(window).scrollTop(),
+            divTop         = $('#floattag').offset().top,
+            divHeight      = 0,
+            topnavbgHeight = $('#navbar').height(),
+            navbgHeight    = 0,
+            totalHeight    = divTop+divHeight-topnavbgHeight-navbgHeight,
+            foorTop        = $('.footer').offset().top;
+            console.log(divTop+','+topnavbgHeight);
+        if($(window).width() > 991) {
+            if(scroTop >= totalHeight){
+                if(scroTop+topnavbgHeight+navbgHeight >= foorTop){
+                    $('#googlead_float').css('top',foorTop-fbNewsHeight-30+'px');
+                    $('#googlead_float').css('position','absolute');
+                }else{
+                    $('#googlead_float').css('top', topnavbgHeight+navbgHeight+5+'px');
+                    $('#googlead_float').css('position', 'fixed');
+                    console.log('touch floattag');
+                }
+            }else{
+                $('#googlead_float').css('top', 'initial');
+                $('#googlead_float').css('position', 'initial');
+            }
+        }
+    });
+</script>
 </body>
 </html>
 

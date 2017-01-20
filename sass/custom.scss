@@ -13,9 +13,12 @@
 a:focus{
     outline: none;
 }
+$dashed-lighted: #dddddd;
+$dashed-darked: #a6a6a6;
+$price-hover-bg: #fff6de;
 @mixin main-title{
     font-size: 1.6rem;
-    border-bottom: 1px solid #d72825;
+    border-bottom: 1px solid $brand-primary;
     padding: 5px 0;
     margin-bottom: 10px;
     color: $brand-primary;
@@ -27,41 +30,18 @@ a:focus{
     left: 50%;
     @include transform(translateX(-50%));
 }
-// $all-menu-height: 750px;
-$all-menu-height: 500px;
+@mixin ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+%ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;    
+}
+$all-menu-height: 750px;
 $menu-display: none;
-//1320
-//****************************
-// .navbar-fixed-top{
-//     position: fixed;
-//     right: 0;
-//     left: 0;
-//     z-index: 1030;    
-//     top: -145px;
-//     &.down{
-//         top:0;
-//         transition: top 0.5s ease;
-//     }
-//     &.up{
-//         top: -145px;
-//         transition: top 0.5s ease;
-//     }
-
-// }
-// .navbar{
-//     top: 0;
-//     &.navbarfixed{
-//         position: fixed;
-//         transform: translateY(-100%);
-//         z-index: 1030;
-//     }
-//     &.is-minimized{
-//         visibility: hidden;
-//     }
-//     &.is-maximized{
-//         transform: translateY(0);
-//     }
-// }
 .navbar{
     top: 0;
     z-index: 1030;
@@ -73,26 +53,6 @@ $menu-display: none;
 .max{
     transform: translateY(0%);
 }
-////////////////////////////
-// .navbar{
-//     position: fixed;
-//     top: 0;
-//     transition: top 0.2s ease-in-out;
-//     z-index: 1030;
-// }
-// .nav-up {
-//     top: -66px;
-//     @media (max-width: $screen-tablet){
-//         top: -132px;
-//     }
-// }
-// #offsetTop{
-//     padding-top: 80px;
-//     @media (max-width: $screen-tablet){
-//         padding-top: 146px;
-//     }
-// }
-////////////////////////////
 .gray-bg{
     background-color: #efefef;
 }
@@ -102,9 +62,7 @@ $menu-display: none;
         margin-top: 145px;
     }
 }
-.section-padding{
-    padding: 0 5px;
-}
+
 .loading-block{
     text-align: center;
     padding: 5% 0;
@@ -180,7 +138,13 @@ $menu-display: none;
     border: 0;   
 }
 .navbar-brand{
-    padding: 13px;
+    padding: 10px;
+    @media (max-width: $screen-phone){
+        padding-bottom: 0;
+    }  
+    img{
+        height: 45px!important;
+    }
 }
 //all-menu phone
 @media (max-width: $screen-desktop - 1){
@@ -198,6 +162,9 @@ $menu-display: none;
                     display: block;
                     color: #fff;
                     padding: 23px;
+                    @media(max-width: $screen-phone){
+                        padding: 17px 23px;
+                    }
                 }
                 >ul{
                     position: fixed;
@@ -228,7 +195,7 @@ $menu-display: none;
                         }
                     }
                     >li{
-                        border-bottom: 1px solid #DDD;
+                        border-bottom: 1px solid $dashed-lighted;
                         &:last-child{
                             border-bottom: 0;
                         }
@@ -264,7 +231,7 @@ $menu-display: none;
                                 display: none;
                             }
                             .item{
-                                border-top: 1px solid #DDD;   
+                                border-top: 1px solid $dashed-lighted;   
                                 position: relative;             
                                 >.tt{
                                     padding: 8px 8px 8px 36px;
@@ -281,12 +248,12 @@ $menu-display: none;
                                         color: $brand-primary; 
                                     }
                                     &.active{
-                                        color:#961c1a;
+                                        color: darken($brand-primary, 15%);
                                         text-decoration: underline;
                                     }
                                     &.active:before{
                                         content: "\f0d8";
-                                        color: #961c1a;
+                                        color: darken($brand-primary, 15%);
                                     }
                                     &.go:before{
                                         display: none;
@@ -348,7 +315,7 @@ $menu-display: none;
                     background-color: #fff;
                     width: 200px;
                     z-index: 11;
-                    border: 1px solid #ddd;
+                    border: 1px solid $dashed-lighted;
                     padding: 10px 0;
                     list-style: none;
                     top: 64px;
@@ -403,7 +370,7 @@ $menu-display: none;
                                 background-color: #fff;
                                 width: 600px;
                                 z-index: 11;
-                                border: 1px solid #ddd;
+                                border: 1px solid $dashed-lighted;
                                 top: -1px;
                                 height: $all-menu-height;
                                 padding: 12px 24px;
@@ -411,37 +378,34 @@ $menu-display: none;
                                 display: $menu-display;
                                 background-repeat: no-repeat;
                                 background-position: right bottom;
-                                &.menuBg-1{//情報
-                                    background-image: url(http://www.obj.com.au/images/images/image-sk2-cosmetic-skincare-product.png);
-                                }
-                                &.menuBg-2{//美妝
-                                    background-image: url(http://img.vogue.com.tw/userfiles/FCK/2015121444973305.png);
-                                    background-size: 70%;
-                                }
-                                &.menuBg-3{//衣服
-                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_b_nav.png);
-                                    background-size: 110%;
-                                    background-position: 40px 208px;
-                                }
-                                &.menuBg-4{//鞋子
-                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_C_menu_bg.png);
-                                    background-size: 96%;
-                                    background-position: 64px 226px;
-                                }
-                                &.menuBg-5{//3C
-
-                                }
-                                &.menuBg-6{//食品
-                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_J_menu_bg.png);
-                                }
-                                &.menuBg-7{//家居
-                                    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/img16/home/flyout/1001448_us_home_flyout-rev_us_v8._CB282183027_.png);
-                                    background-size: 76%;
-                                }
-                                &.menuBg-8{//居家生活
-                                    background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_H_menu_bg.png);
-                                    background-position: 0 113px;
-                                }                                
+                                // &.menuBg-1{//情報
+                                //     background-image: url(http://www.obj.com.au/images/images/image-sk2-cosmetic-skincare-product.png);
+                                // }
+                                // &.menuBg-2{//美妝
+                                //     background-image: url(http://img.vogue.com.tw/userfiles/FCK/2015121444973305.png);
+                                //     background-size: 70%;
+                                // }
+                                // &.menuBg-3{//衣服
+                                //     background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_b_nav.png);
+                                //     background-size: 110%;
+                                //     background-position: 40px 208px;
+                                // }
+                                // &.menuBg-4{//鞋子
+                                //     background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_C_menu_bg.png);
+                                //     background-size: 96%;
+                                //     background-position: 64px 226px;
+                                // }                       
+                                // &.menuBg-6{//食品
+                                //     background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_J_menu_bg.png);
+                                // }
+                                // &.menuBg-7{//家居
+                                //     background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/img16/home/flyout/1001448_us_home_flyout-rev_us_v8._CB282183027_.png);
+                                //     background-size: 76%;
+                                // }
+                                // &.menuBg-8{//居家生活
+                                //     background-image: url(https://img.udn.com/art/pc/udn-new_20151005/images/menu/cat_H_menu_bg.png);
+                                //     background-position: 0 113px;
+                                // }                                
                                 .TT{
                                     @include main-title;
                                 }
@@ -489,7 +453,6 @@ $menu-display: none;
         float: left;
     }
 }
-    
 .main-side{
     @media (min-width: $screen-desktop){
         float: right
@@ -497,18 +460,37 @@ $menu-display: none;
 }
 .mode-wrap{
     margin-bottom: 20px;
-    section{
-        &:nth-child(3){
-            padding: 0 5px;
+    .product-intro{
+        padding: 10px;
+        .bd{
+            max-height: 800px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            @media(max-width: $screen-phone){
+                max-height: 300px;
+            }
+            &.open{
+                max-height: initial;
+            }     
+        }        
+        .btn-open{
+            width: 50%;
         }
+    }
+    section{
         background-color: #fff;
-        overflow-x: scroll;
+        @media(max-width: $screen-phone){
+            overflow-x: scroll;
+        }
         table{
             width: 100%!important;
             max-width: 100%!important;
         }            
         img{
             max-width: 100%!important;
+            max-height: 100%!important;
+            width: auto!important;
+            height: auto!important;
         }        
     }
 }
@@ -600,13 +582,13 @@ $menu-display: none;
     .product-body{
         .tt{
             overflow: hidden;
-            line-height: 1;
+            line-height: 1.2;
             a{
                 color: #000;
                 display: block;
                 word-break: break-all;
                 &:hover{
-                color: #00adff;
+                    color: $brand-info;
                 }
             }                    
         }
@@ -658,9 +640,7 @@ $menu-display: none;
             &.active{
                 color: $brand-primary;
                 text-decoration: none;
-            }
-
-            
+            }            
         }
     }
     //卡片式
@@ -715,15 +695,18 @@ $menu-display: none;
             }
             .tt{            
                 font-size: 1.6rem;                
-                height: 48px;
-                margin: 20px 0 10px 0;           
+                height: 4.8rem;
+                margin: 10px 0 10px 0;             
             }
             .good-news{
-                color: #63C355;
+                color: $brand-success;
                 font-size: 12px;
                 white-space: nowrap;
                 overflow: hidden;
                 height: 17px;
+                &:empty{
+                    display: none;
+                }
                 @media (max-width: $screen-phone){
                     display: none;
                 }
@@ -777,8 +760,8 @@ $menu-display: none;
             width: 170px;
             height: 170px;
             @media (max-width: $screen-tablet){
-                width: 150px;
-                height: 150px;
+                width: 135px;
+                height: 135px;
             }
             @media (max-width: $screen-phone){
                 width: 100px;
@@ -806,7 +789,7 @@ $menu-display: none;
                 }  
             }
             .good-news{
-                color: #63C355;
+                color: $brand-success;
                 font-size: 14px;
                 &:empty{
                     display: none;
@@ -826,7 +809,7 @@ $menu-display: none;
             min-width: 96px;
             margin: -12px -12px -12px 0;
             text-align: center;
-            border-left: 1px dashed #ddd;
+            border-left: 1px dashed $dashed-lighted;
             .wrap{
                 list-style: none;
                 margin-bottom: 0;
@@ -842,7 +825,7 @@ $menu-display: none;
                 min-width: initial;
                 margin: 10px 0 0 0;
                 border-left: 0;
-                border-top: 1px dashed #ddd;
+                border-top: 1px dashed $dashed-lighted;
                 padding: 10px 0 0 0;
                 .wrap{
                     width: 100%;                    
@@ -871,6 +854,15 @@ $menu-display: none;
             box-shadow: none;
         }
         .product-body{
+            .intro{
+                min-height: 60px;
+                @media(max-width: $screen-desktop){
+                    min-height: 40px;
+                }
+                @media(max-width: $screen-tablet){
+                    min-height: initial;
+                }
+            }
             .mall{
                 border-top: 1px dashed #ccc;
                 padding-top: 14px;
@@ -885,28 +877,35 @@ $menu-display: none;
                 .btn{
                     float: right;
                     @media (max-width: $screen-phone){
-                        display: none;
+                        float: static;
                     }
                 }
             }
-            // .price{
-            //     span{
-            //         font-size: 20px;
-            //     }
-            // }
+            .price{
+                span{
+                    font-size: 2.4rem;
+                    @media(max-width: $screen-tablet){
+                        font-size: 2rem;
+                    }
+                    @media(max-width: $screen-phone){
+                        font-size: 1.6rem;
+                    }
+                }
+            }
         }
         .product-left{
             margin-left: 20px;
-            height: 200px;
-            width: 200px;
+            height: 250px;
+            width: 250px;
             @media (max-width: $screen-tablet){
                 width: 150px;
                 height: 150px;
             }
             @media (max-width: $screen-phone){
-                height: 100px;
-                width: 100px;
+                width: 100%;
+                height: 200px;
                 margin-left: 0;
+                margin-bottom: 10px;
             }
         }
     }
@@ -920,11 +919,12 @@ $menu-display: none;
         padding: 0;
         margin: 0;
         li{         
-            border-bottom: 1px dashed #dddddd;                  
+            border-bottom: 1px dashed $dashed-lighted;                  
             a{
                 display: block;                
                 padding: 5px 10px; 
                 color: #000;
+                @extend %ellipsis;
                 &:hover{
                     color: $brand-primary;
                 }
@@ -932,57 +932,13 @@ $menu-display: none;
         }
     }
 }
-// .card{
-//     .item{
-//         display: block;
-//         background-color: #fff;     
-//         &:hover{
-//             text-decoration: none;            
-//             opacity: 0.7;
-//         }   
-//         .item-top{
-//             width: 100%;
-//             height: 248px;
-//             overflow: hidden;
-//             img{
-//                 position: relative;
-//                 height: 100%;
-//                 left: 50%;
-//                 transform: translateX(-50%);
-//             }
-//         }
-//         .item-bottom{
-//             padding: 10px;
-//             .info{
-//                 color: #000;
-//                 font-size: 18px;
-//                 height: 50px;
-//                 overflow: hidden;
-//             }
-//             .price{
-//                 text-align: right;
-//                 color: $brand-primary;
-//                 i{
-//                     font-family: Arial;
-//                     font-style: normal;
-//                 }
-//                 span{
-//                     font-size: 18px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 //比價頁
 .price-list{
     background-color: #fff;
     padding: 20px;
-    border-bottom: 1px dashed #ddd;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-
+    border-bottom: 1px dashed $dashed-lighted;
+    @include display-flex;
+    @include align-items(center);
     @include clearfix;
     &:last-child{
         border-bottom: 0;
@@ -995,11 +951,11 @@ $menu-display: none;
         text-decoration: none;
     }
     &:hover{        
-        background-color: #fff6de;
+        background-color: $price-hover-bg;
         .price-list-body{
             .tt{
                 h3{                                   
-                    color: #00adff;
+                    color: $brand-info;
                 }
             }
         }
@@ -1008,13 +964,14 @@ $menu-display: none;
         width: 90px;
         height: 90px;
         overflow: hidden;
-        flex: none;
+        @include flex(none);
         img{
             @include img-height;
         }
     }
     .price-list-body{
-        display: flex;
+        @include display-flex;
+        @include align-items(center);
         word-break: break-all;
         margin-left: 30px;
         width: 100%;
@@ -1023,7 +980,7 @@ $menu-display: none;
             margin-left: 10px;
         }
         .tt{
-            flex: 1;
+            @include flex(1);            
             margin: 0;
             display: inline-block;
             h3{                
@@ -1052,7 +1009,7 @@ $menu-display: none;
             }
         }
         .price{
-            flex: none;
+            @include flex(none);
             min-width: 135px;
             color: $brand-primary;
             font-weight: bold;
@@ -1075,10 +1032,10 @@ $menu-display: none;
             }
         }
         .other{
-            flex: none;
+            @include flex(none);
             padding-left: 12px;
             @media (max-width: $screen-tablet){
-            display: none;
+                display: none;
             }
         }
     }
@@ -1147,14 +1104,15 @@ $menu-display: none;
     li{
         width: 33.3%;
         float: left;
-        border-bottom: 1px #a6a6a6 dashed;
+        border-bottom: 1px $dashed-darked dashed;
         @media (max-width: $screen-phone){
             width: 100%;
         }
         a{
             display: block;
             color: #000;
-            padding: 5px 10px; 
+            padding: 5px 10px;
+            @extend %ellipsis;
             &:hover{
                 color: $brand-primary;
             }
@@ -1338,52 +1296,6 @@ $menu-display: none;
         }
     }
 }
-
-//home
-// .home-wrap{
-//     padding-top: 10%;
-//     max-width: 600px;
-// }
-// .home{
-//     text-align: center;
-//     .home-header{
-//         text-align: center;
-//         .logo{
-//             display: inline-block;
-//         }
-//         p{
-//             color: $gray-base;            
-//         }
-//     }
-//     .home-body{
-//         .hot-tag-wrap{
-//             margin:20px 0;
-//         }
-//         .btn-tag-wrap{
-//             .btn-tag{
-//                 margin: 3px 0;
-//                 border: 1px solid $brand-primary;
-//                 color: $brand-primary;
-//                 &:hover{
-//                     background-color: $brand-primary;
-//                     color: #fff;
-//                 }
-//             }
-//         }
-//     }
-// }
-// .home-footer{
-//     color: #777;
-//     text-align: center;
-//     padding: 15px;
-//     width: 100%;
-//     @media (min-width: 321px){
-//         position: fixed;
-//         bottom: 0;
-//     }
-// }
-
-
 //遮罩搭配all-menu使用
 .mask{
     position: fixed;
@@ -1399,7 +1311,6 @@ $menu-display: none;
         opacity: 0.5;
     }
 }
-
 //輪播
 .slider-container{
     margin-bottom: 5%;
@@ -1494,6 +1405,7 @@ $menu-display: none;
     }
 }
 .responsive{
+    margin-top: 12px;
     a{
         width: 200px;
         display: block;
@@ -1571,6 +1483,7 @@ $menu-display: none;
     }
 }
 .mall-btn-wrap{
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -1596,7 +1509,10 @@ $menu-display: none;
     width: 100%;
     position: relative;
     .mall{
-         .item{
+        &:first-child{
+            margin-top: 12px;
+        }
+         .item{            
             margin-bottom: 5px;
             display: block;
             img{
