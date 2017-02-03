@@ -237,6 +237,7 @@ $menu-display: none;
                                     padding: 8px 8px 8px 36px;
                                     display: block;  
                                     position: relative;
+                                    width: calc(100% - 60px);
                                     &:before{
                                         content: "\f0d7";
                                         font: normal normal normal 14px/1 FontAwesome;

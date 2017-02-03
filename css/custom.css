@@ -55,7 +55,7 @@ a:focus { outline: none; }
   .all-menu > ul > li > ul > li .menu { display: none; }
   .all-menu > ul > li > ul > li .menu .TT { display: none; }
   .all-menu > ul > li > ul > li .menu .item { border-top: 1px solid #dddddd; position: relative; }
-  .all-menu > ul > li > ul > li .menu .item > .tt { padding: 8px 8px 8px 36px; display: block; position: relative; }
+  .all-menu > ul > li > ul > li .menu .item > .tt { padding: 8px 8px 8px 36px; display: block; position: relative; width: calc(100% - 60px); }
   .all-menu > ul > li > ul > li .menu .item > .tt:before { content: "\f0d7"; font: normal normal normal 14px/1 FontAwesome; position: absolute; font-size: 16px; top: 50%; left: 20px; transform: translateY(-50%); color: #d72825; }
   .all-menu > ul > li > ul > li .menu .item > .tt.active { color: #961c1a; text-decoration: underline; }
   .all-menu > ul > li > ul > li .menu .item > .tt.active:before { content: "\f0d8"; color: #961c1a; }
