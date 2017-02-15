@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a:focus { outline: none; }
 
 .card .list li a, .price-hot-wrod li a { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
@@ -26,7 +27,7 @@ a:focus { outline: none; }
 .search-bar .input-group-lg { position: relative; }
 .search-bar .input-group-lg .search-word-wrap { position: absolute; left: 0; top: 46px; z-index: 2; background-color: #fff; width: calc(100% - 58px); border: 1px solid #ccc; border-radius: 0 0 4px 4px; }
 @media (max-width: 480px) { .search-bar .input-group-lg .search-word-wrap { width: 100%; } }
-.search-bar .input-group-lg .search-word-wrap ul { list-style: none; padding: 0; margin: 0; max-height: 215px; overflow-y: scroll; }
+.search-bar .input-group-lg .search-word-wrap ul { list-style: none; padding: 0; margin: 0; max-height: 215px; overflow-y: scroll; text-align: left; }
 .search-bar .input-group-lg .search-word-wrap ul li a { display: block; padding: 8px 12px; color: #000; }
 @media (max-width: 480px) { .search-bar .input-group-lg .search-word-wrap ul li a { padding: 6px 10px; } }
 .search-bar .input-group-lg .search-word-wrap ul li a:hover { text-decoration: none; color: #000; background-color: #efefef; }
@@ -96,6 +97,9 @@ a:focus { outline: none; }
 @media (max-width: 480px) { .mode-wrap .product-intro .bd { max-height: 300px; } }
 .mode-wrap .product-intro .bd.open { max-height: initial; }
 .mode-wrap .product-intro .btn-open { width: 50%; }
+.mode-wrap .product-intro.off { position: relative; }
+.mode-wrap .product-intro.off:after { position: absolute; content: '「商品已停售，此為歷史資料」'; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); color: #fff; text-align: center; padding-top: 10%; font-size: 4rem; }
+@media (max-width: 480px) { .mode-wrap .product-intro.off:after { font-size: 2.4rem; } }
 .mode-wrap section { background-color: #fff; }
 @media (max-width: 480px) { .mode-wrap section { overflow-x: scroll; } }
 .mode-wrap section table { width: 100% !important; max-width: 100% !important; }
@@ -375,3 +379,6 @@ a:focus { outline: none; }
 .index-banner-wrap .mall:first-child { margin-top: 12px; }
 .index-banner-wrap .mall .item { margin-bottom: 5px; display: block; }
 .index-banner-wrap .mall .item img { width: 100%; }
+
+.home-wrap { text-align: center; }
+.home-wrap .home { max-width: 600px; margin: 10% auto 0 auto; }

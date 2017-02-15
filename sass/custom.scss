@@ -112,6 +112,7 @@ $menu-display: none;
                 margin: 0;
                 max-height: 215px;
                 overflow-y: scroll;
+                text-align: left;
                 li{
                     a{
                         display: block;
@@ -476,6 +477,25 @@ $menu-display: none;
         }        
         .btn-open{
             width: 50%;
+        }
+        &.off{
+            position: relative;
+            &:after{
+                position: absolute;
+                content: '「商品已停售，此為歷史資料」';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                text-align: center;
+                padding-top: 10%;
+                font-size: 4rem;
+                @media(max-width: $screen-phone){
+                    font-size: 2.4rem;
+                }
+            }
         }
     }
     section{
@@ -1520,5 +1540,13 @@ $menu-display: none;
                 width: 100%;
             }
         }   
+    }
+}
+//home
+.home-wrap{
+    text-align: center;
+    .home{
+        max-width: 600px;
+        margin: 10% auto 0 auto;
     }
 }
