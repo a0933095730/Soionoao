@@ -649,14 +649,17 @@ $menu-display: none;
     }  
     .product-right{
         .btn-link{
-            color: #777;
+            color: #b3b3b3;
             @include transition(all 0.3s);
             &:hover{
-                color: $brand-primary;
+                color: #777;
                 text-decoration: none;
                 @media (max-width: $screen-tablet){
-                    color: #777;
+                    color: #b3b3b3;
                 }
+            }
+            &:focus{
+                text-decoration: none;
             }
             &.active{
                 color: $brand-primary;
@@ -744,7 +747,7 @@ $menu-display: none;
                 margin: 0;                
                 li{
                     &:nth-child(1){
-                        display: none;
+                        // display: none;
                     }
                     &:nth-child(2){
                         width: 100%;
@@ -837,7 +840,7 @@ $menu-display: none;
                 padding: 0;
                 li{
                     &:nth-child(1){
-                        display: none;
+                        // display: none;
                     }
                 }
             }
@@ -852,11 +855,11 @@ $menu-display: none;
                     width: 100%;                    
                     @include clearfix;
                     li{
-                        width: 100%;
+                        width: 50%;
                         float: left;
-                        .btn{
-                            width: 50%;
-                        }                                           
+                        // .btn{
+                        //     width: 50%;
+                        // }                                           
                     }
                 }
             }            
