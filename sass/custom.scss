@@ -833,7 +833,7 @@ $menu-display: none;
                 padding: 0;
                 li{
                     &:nth-child(1){
-                        display: none;
+                        // display: none;
                     }
                 }
             }
@@ -848,7 +848,7 @@ $menu-display: none;
                     width: 100%;                    
                     @include clearfix;
                     li{
-                        width: 100%;
+                        width: 50%;
                         float: left;
                         .btn{
                             width: 50%;

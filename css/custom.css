@@ -1017,10 +1017,6 @@ a:focus {
   margin-bottom: 0;
   padding: 0;
 }
-/* line 835, ../sass/custom.scss */
-.mode-list .product .product-right .wrap li:nth-child(1) {
-  display: none;
-}
 @media (max-width: 480px) {
   /* line 820, ../sass/custom.scss */
   .mode-list .product .product-right {
@@ -1046,7 +1042,7 @@ a:focus {
   }
   /* line 850, ../sass/custom.scss */
   .mode-list .product .product-right .wrap li {
-    width: 100%;
+    width: 50%;
     float: left;
   }
   /* line 853, ../sass/custom.scss */
